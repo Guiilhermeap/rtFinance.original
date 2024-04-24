@@ -1,0 +1,280 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/* =================== VARIAVEIS ======================== */
+:root {
+  --color-base: 156;
+
+  --bg-color: hsl(var(--color-base), 0%, 2%);
+  --bg-color-2: hsl(var(--color-base), 100%, 4%);
+  --text-color: hsl(var(--color-base), 0%, 90%);
+  --text-color-2: hsl(60, 100%, 50%);
+  --text-color-3: hsl(var(--color-base), 0%, 2%);
+
+}
+
+/* =========== BASE ============ */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color-2);
+}
+
+/* ============== DARK =======================*/
+/* body.dark-theme {
+  --bg-color: #121212;
+  --bg-color-2: hsl(var(--color-base), 100%, 60%);
+  --name-logo-color: hsl(var(--color-base), 100%, 40%);
+  --span-color: hsl(var(--color-base), 100%, 70%);
+  --text-color-dark: #ffffff;
+}
+
+
+
+.change-theme {
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #fff;
+  padding: 0em 1em;
+}
+
+.change-theme:hover {
+  color: var(--span-color);
+} */
+
+/* ==============NAV BAR/HEADER=============== */
+.header__trovao {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+}
+
+.nav__bar {
+  backdrop-filter: blur(8px);
+  width: 40em;
+  height: 6em;
+  padding: 0 4em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em 2em 0 2em;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 1px hsl(var(--color-base), 0%, 15%);
+}
+
+.nav__bar .nome {
+  color: var(--text-color);
+  font-size: 1.5em;
+}
+
+.itens__nav {
+  color: var(--text-color);
+  font-size: 1.6em;
+}
+
+.itens__nav i:hover {
+  color: var(--nav-color-text-hover);
+  transition: all ease-in .5s;
+}
+
+.itens__nav i {
+  object-fit: cover;
+}
+
+
+/* ============= MAIN/AUTOR ================== */
+
+.main__container {
+  min-height: 100vh;
+  max-width: 1920px;
+  overflow: hidden;
+}
+
+.autor__container {
+  min-height: 100vh;
+  max-width: 1920px;
+  display: flex;
+  align-items: end;
+}
+
+.autor__container img {
+  z-index: 1;
+  width: 32em;
+  position: absolute;
+  padding-right: 4em;
+  right: 1px;
+  filter: contrast(130%);
+}
+
+.text__container {
+  width: 100%;
+}
+
+.name {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.funcao {
+  z-index: 2;
+  position: relative;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#h1-name {
+  z-index: 1;
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Kode Mono", monospace;
+  font-size: 6em;
+  font-weight: 700;
+  white-space: nowrap;
+  -webkit-text-stroke: 1.5px var(--text-color-3);
+  -webkit-text-fill-color: var(--text-color);
+}
+
+#h1-name::before {
+  content: "ricardo.trovão.ricardo.trovão.";
+  position: absolute;
+  -webkit-text-stroke: 1.5px var(--text-color);
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  left: -18em;
+}
+
+#h1-name::after {
+  content: "ricardo.trovão.";
+  position: absolute;
+  -webkit-text-stroke: 1.5px var(--text-color);
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  right: -9em;
+}
+
+#h1-funcao {
+  z-index: 2;
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Kode Mono", monospace;
+  font-size: 6em;
+  font-weight: 700;
+  white-space: nowrap;
+  -webkit-text-stroke: 1.5px var(--text-color-3);
+  -webkit-text-fill-color: var(--text-color);
+}
+
+#h1-funcao::before {
+  content: "professor.finaças.";
+  position: absolute;
+  -webkit-text-stroke: 1.5px var(--text-color);
+  -webkit-text-fill-color: transparent;
+  font-size: 1em;
+  font-weight: 700;
+  left: -10.8em;
+}
+
+#h1-funcao::after {
+  content: "professor.finanças.professor.finanças.";
+  position: absolute;
+  -webkit-text-stroke: 1.5px var(--text-color);
+  -webkit-text-fill-color: transparent;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+
+/* =========== LIVROS ================ */
+
+.livro__container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-color-2);
+}
+
+.livro__header_cont {
+  height: 8em;
+  margin: 0 2em;
+  z-index: 1;
+  border-bottom: 1px solid var(--text-color);
+  padding: 0 2em;
+}
+
+.livro__header {
+  height: 5em;
+}
+
+.livro__header h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 25px;
+  color: var(--text-color);
+  position: relative;
+  padding-top: 4rem;
+}
+
+.text_livro {
+  width: 100%;
+  padding: 5em 0 0 2em;
+}
+
+.livro__img {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.livro__img h1 {
+  color: var(--text-color-2);
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+.livro__img p {
+  font-size: 30px;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.livro__img .peq {
+  font-size: 25px;
+  color: var(--text-color-2);
+  text-transform: uppercase;
+}
+
+.livro__img .gran {
+  font-size: 38px;
+  color: var(--text-color-2);
+  text-transform: uppercase;
+}
+
+.livro__img .p__autores {
+  font-size: 22px;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.livro__img img {
+  width: 35em;
+}

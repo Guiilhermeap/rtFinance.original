@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RT FINANCE</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="assets/js/country-list.js"></script>
+
+    <script src="assets/js/Simulador.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8f33dbb147.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!--====================== NAV BAR ============================-->
+    <header class="header__nav" id="header">
+      <div class="nav__border" id="nav">
+        <img
+          src="assets/img/logo_white.png"
+          class="logo"
+          id="img"
+          alt="#"
+        />
+        <a href="#"><p>rt finance</p></a>
+        <nav class="nav__menu" id="nav-menu">
+          <input type="checkbox" id="check" />
+          <div class="container__a">
+            <a href="#sobre">Sobre Nós<span></span></a>
+            <a href="#convertorMoedas">Conversor de moedas<span></span></a>
+            <a href="#simuladorValores">Dicas<span></span></a>
+            <a href="#simuladorValores">Simulador<span></span></a>
+            <a href="#comentarios">Comentários<span></span></a>
+            <a href="#especialista">Especialista<span></span></a>
+            <label for="check" class="close__menu"
+              ><i class="uil uil-times"></i
+            ></label>
+          </div>
+          <label for="check" class="open__menu"
+            ><i
+              class="uil uil-bars open__menu"
+              id="icon"
+              onclick="trocarIcone()"
+            ></i
+          ></label>
+
+          <!-- =========== DARK ============= -->
+          <div class="nav_btns">
+            <!--Theme Change Button-->
+            <i class="uil uil-moon change-theme" id="theme-button"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ================== HOME ===================== -->
+    <div class="home__section">
+      <div class="container__blur" id="blur">
+        <div class="descricao__rt"></div>
+      </div>
+    </div>
+
+    <!-- ================== PARALLAX ===================== -->
+    <section class="efeito__parallax"></section>
+
+    <!-- ================== SOBRE ===================== -->
+    <div class="sobre__container" id="sobre">
+      <div class="sobre">
+        <div class="sobre__texto">
+          <div class="box__aspas">
+            <div class="aspas__container1">
+              <i class="bi bi-quote"></i>
+            </div>
+            <h1>rt finance</h1>
+            <p class="rt_slogan">Rumo à Prosperidade Financeira!</p>
+            <div class="aspas__container2">
+              <i class="bi bi-quote aspas_2"></i>
+            </div>
+          </div>
+          <div class="descricao__container">
+            <div>
+              <p class="rt_descricao">
+                Finanças descomplicadas para todos. Acesse comentários, realize
+                dowload de uma planilha de custos pessoais, converta moedas e
+                simule investimentos com a nossa ferramenta intuitiva.
+              </p>
+              <div class="about_buttons">
+                <div style="text-align: center">
+                  <p>
+                    <i class="bi bi-lightbulb ideia"></i>
+                    Antes de tudo! Baixe a planilha para seu controle pessoal
+                  </p>
+                  <a
+                    download=""
+                    href="assets/img/planilha.xlsx"
+                    class="button button--flex"
+                  >
+                    <i class="uil uil-file-download"></i>
+                    Download Planilha
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <article class="article__container">
+      <!-- ================== COMENTÁRIOS ===================== -->
+
+      <div class="comentarios__container" id="comentarios">
+        <div class="comentario">
+          <div class="comentarios__header">
+            <div class="comentarios__barra">
+              <h1>Comentários</h1>
+            </div>
+          </div>
+
+          <div class="txt__comentario">
+            <h1>Veja o comentário de quem utilizou nossos serviços !!!</h1>
+            <p>Deixe o seu comentário também</p>
+          </div>
+
+          <div class="card__inserir">
+            <div class="container">
+              <div id="alert" style="display: none"></div>
+              <form id="commentForm">
+                <div class="form-group">
+                  <label for="rating">Avaliação</label>
+                  <div class="input__container">
+                    <input
+                      type="radio"
+                      id="rating1"
+                      name="rating"
+                      value="1"
+                      required
+                    /><label for="rating1"></label>
+                    <input
+                      type="radio"
+                      id="rating2"
+                      name="rating"
+                      value="2"
+                    /><label for="rating2"></label>
+                    <input
+                      type="radio"
+                      id="rating3"
+                      name="rating"
+                      value="3"
+                    /><label for="rating3"></label>
+                    <input
+                      type="radio"
+                      id="rating4"
+                      name="rating"
+                      value="4"
+                    /><label for="rating4"></label>
+                    <input
+                      type="radio"
+                      id="rating5"
+                      name="rating"
+                      value="5"
+                    /><label for="rating5"></label>
+                  </div>
+                </div>
+                <div class="form-group2">
+                  <label for="name">Seu Nome</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group3">
+                  <label for="comment">Comentário</label>
+                  <textarea id="comment" name="comment" required></textarea>
+                </div>
+                <button type="submit">Enviar Comentário</button>
+              </form>
+            </div>
+            <div class="card__retorno">
+              <div class="comentario__autor" id="comentario-autor">
+                <p id="comments"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =============== DICAS ================ -->
+      <div class="dicas__container">
+        <div class="dicas__header">
+          <div class="dicas__barra">
+            <h1>DICAS</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== Converter Moedas ==================== -->
+      <div class="convertor__moedas" id="convertorMoedas">
+        <div class="wrapper">
+          <div class="card__conversor">
+            <h1>conversor de moedas</h1>
+            <div class="form__container">
+              <div class="text__conversor">
+                <p class="text__real">
+                  realize a conversão com valores em <span>tempo real.</span>
+                </p>
+                <p class="text__perg">
+                  Está pensando em viajar? ou até mesmo ficar informado sobre a
+                  cotação de moedas e seus valores? preencha com o valor e
+                  realize a conversão.
+                </p>
+              </div>
+              <form action="#">
+                <div style="width: 100%">
+                  <div class="img__cont">
+                    <i class="uil uil-bitcoin-circle"></i>
+                    <i class="uil uil-exchange-alt"></i>
+                    <i class="uil uil-euro-circle"></i>
+                  </div>
+                  <div class="amount">
+                    <p>Digite o Valor</p>
+                    <input type="text" value="1" />
+                  </div>
+                  <div class="drop__list">
+                    <div class="de">
+                      <p>De</p>
+                      <div class="select__box" id="select__box">
+                        <img
+                          src="https://flagcdn.com/48x36/us.png"
+                          alt="flag"
+                        />
+                        <select class="select">
+                          <!-- Options são colocadas apartir do JavaScript -->
+                        </select>
+                      </div>
+                    </div>
+                    <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="para">
+                      <p>Para</p>
+                      <div class="select__box">
+                        <img
+                          src="https://flagcdn.com/48x36/np.png"
+                          alt="flag"
+                        />
+                        <select class="select">
+                          <!-- Options são colocadas apartir do JavaScript -->
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="exchange-rate">Obtendo taxa de câmbio...</div>
+                  <button>Obter taxa de câmbio</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================== AREA DE SIMULAÇÃO ========================== -->
+
+      <div class="simulacao__container" id="simuladorValores">
+        <div class="simulacao">
+          <div class="header__container">
+            <div class="header__text">
+              <h1>Simulador de Investimentos</h1>
+            </div>
+          </div>
+          <div class="text__simulador">
+            <div class="icon__">
+              <div>
+                <i class="uil uil-analytics"></i>
+              </div>
+            </div>
+            <div class="text__container">
+              <div>
+                <p class="text__inv">
+                  Simule seu <span>investimento</span> em
+                  <span>diferentes</span> poupanças.
+                </p>
+                <p class="text__invs">
+                  Sobrou aquele <span>dinheirinho</span> no final do mês?<br />
+                  que tal investi-lo?
+                </p>
+                <p class="text__invss">
+                  faça a <span>análise</span> você mesmo em qual poupança deseja
+                  investir...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="container__box">
+            <div class="container__card">
+              <div class="card">
+                <div class="input-box">
+                  <div>
+                    <label for="ValorInicial">Valor Inicial:</label>
+                    <input type="number" id="ValorInicial" class="txtbox" />
+                  </div>
+                </div>
+                <div class="input-box">
+                  <div>
+                    <label for="ValorMensal">Contribuição Mensal:</label>
+                    <input
+                      type="number"
+                      id="ValorMensal"
+                      required
+                      class="txtbox"
+                    />
+                  </div>
+                </div>
+                <div class="input-box">
+                  <label for="Tempo">Tempo:</label>
+                  <div class="input-field">
+                    <input type="number" id="Tempo" class="txtbox" required />
+                    <select id="timeUnit">
+                      <option value="meses">Meses</option>
+                      <option value="anos">Anos</option>
+                    </select>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="btn"
+                  onclick="calculateInvestments()"
+                >
+                  Calcular
+                </button>
+              </div>
+              <div id="graphContainer">
+                <div id="columnchart_material"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--============ ESPECIALISTA - SAIBA MAIS ====================-->
+      <div class="especialista__container" id="especialista">
+        <div class="especialista__header">
+          <div class="especialista__barra">
+            <h1>especialista</h1>
+          </div>
+        </div>
+        <div class="bg__container">
+          <div class="img__container"></div>
+        </div>
+      </div>
+    </article>
+
+    <footer class="footer__site">
+      <div class="svg_onda" style="width: 100%; padding: 0; margin: 0">
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          width="100%"
+          height="100%"
+          viewBox="0 0 1600 1080"
+          preserveAspectRatio="xMidYMax slice"
+        >
+          <defs>
+            <linearGradient id="bg">
+              <stop offset="0%" style="stop-color: var(--bg-color-2)"></stop>
+              <stop offset="50%" style="stop-color: var(--bg-color-2)"></stop>
+              <stop offset="100%" style="stop-color: var(--bg-color-2)"></stop>
+            </linearGradient>
+            <path
+              id="wave"
+              fill="url(#bg)"
+              d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+	s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z"
+            />
+          </defs>
+          <g>
+            <use xlink:href="#wave" opacity=".3">
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                dur="10s"
+                calcMode="spline"
+                values="300 230; -334 180; 270 230"
+                keyTimes="0; .5; 1"
+                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                repeatCount="indefinite"
+              />
+            </use>
+            <use xlink:href="#wave" opacity=".6">
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                dur="8s"
+                calcMode="spline"
+                values="-270 230;243 220;-270 230"
+                keyTimes="0; .6; 1"
+                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                repeatCount="indefinite"
+              />
+            </use>
+            <use xlink:href="#wave" opacty=".9">
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                dur="6s"
+                calcMode="spline"
+                values="0 230;-140 200;0 230"
+                keyTimes="0; .4; 1"
+                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                repeatCount="indefinite"
+              />
+            </use>
+          </g>
+        </svg>
+      </div>
+      <div class="copy__container">
+        <div class="copy">
+          <a href="#" class="icons">
+            <i class="uil uil-linkedin-alt"></i>
+          </a>
+          <a href="#" class="icons">
+            <i class="uil uil-instagram"></i>
+          </a>
+          <a href="#" class="icons">
+            <i class="uil uil-facebook-f"></i>
+          </a>
+        </div>
+        <p>Copyright© 2024 rt finance</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/header__animacao.js"></script>
+  </body>
+</html>

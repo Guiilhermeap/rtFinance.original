@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Header Scroll</title>
+<style>
+  /* Estilos de exemplo */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+  }
+  /* ================= NAV ======================== */
+.header__nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  height: 9em;
+  display: flex;
+  align-items: center;
+  transition: all ease-in 0.8s;
+}
+
+.container__a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+
+.open__menu,
+.close__menu {
+  position: absolute;
+  color: var(--color-texto-body);
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+.open__menu {
+  top: 50%;
+  right: 20px;
+}
+.close__menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: none;
+}
+#check {
+  display: none;
+}
+
+.nav__menu a {
+  color: var(--color-texto-span);
+  position: relative;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 15px;
+  transition: 0.5s;
+  text-transform: uppercase;
+}
+
+.nav__menu a:hover {
+  color: var(--color-texto-span-hover);
+}
+
+.nav__menu a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-span);
+  border-radius: 8px;
+  z-index: -1;
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.nav__menu a:hover span {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.nav__border {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2em;
+}
+
+.nav__border img {
+  width: 7em;
+}
+
+.nav__border p {
+  font-size: 25px;
+  position: absolute;
+  left: 5em;
+  top: 2em;
+  color: var(--color-texto-nav);
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+
+.teste {
+  height: 200vh;
+}
+
+.scrooled {
+  background-color: #ff5b5b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  content: url(assets/img/logo_black.png);
+  transition: all ease-in 1s;
+}
+</style>
+<header class="header__nav" id="header">
+  <div class="nav__border" id="nav">
+    <img src="assets/img/LIVRO-1.png" alt="" id="img">
+    <a href="#"><p>rt finance</p></a>
+    <nav class="nav__menu" id="nav-menu">
+      <input type="checkbox" id="check" />
+      <div class="container__a">
+        <a href="#sobre">Sobre Nós<span></span></a>
+        <a href="#convertorMoedas">Conversor de moedas<span></span></a>
+        <a href="#simuladorValores">Dicas<span></span></a>
+        <a href="#simuladorValores">Simulador<span></span></a>
+        <a href="#comentarios">Comentários<span></span></a>
+        <a href="#especialista">Especialista<span></span></a>
+        <label for="check" class="close__menu"
+          ><i class="uil uil-times"></i
+        ></label>
+      </div>
+      <label for="check" class="open__menu"
+        ><i
+          class="uil uil-bars open__menu"
+          id="icon"
+          onclick="trocarIcone()"
+        ></i
+      ></label>
+
+      <!-- =========== DARK ============= -->
+      <div class="nav_btns">
+        <!--Theme Change Button-->
+        <i class="uil uil-moon change-theme" id="theme-button"></i>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="teste"></div>
+
+<script>
+  window.addEventListener('scroll', function() {
+    var header = document.getElementById('header');
+    var scrollPosition = window.scrollY;
+    var imgOriginal = document.getElementById('img');
+
+    if (scrollPosition > 100) {
+      imgOriginal.src = "assets/img/logo_black.png";
+      // Trocar a imagem do cabeçalho
+      // header.style.backgroundImage = 'url(caminho_para_sua_imagem)';
+    } else if (scrollPosition < 100) {
+      imgOriginal.src = "assets/img/LIVRO-1.png";
+      // Voltar para a imagem original do cabeçalho
+      // header.style.backgroundImage = 'url(caminho_para_sua_imagem_original)';
+    }
+  });
+</script>
+</body>
+</html>
