@@ -11,20 +11,20 @@ window.addEventListener("scroll", function () {
 // ========================= MUDANÇA DE HEADER IMG ================================ //
 
 window.addEventListener("scroll", function () {
-  var header = document.getElementById("header");
   var scrollPosition = window.scrollY;
   var imgOriginal = document.getElementById("img");
 
-  if (scrollPosition > 100) {
+  if (scrollPosition > 650) {
     imgOriginal.src = "assets/img/logo_black.png";
     // Trocar a imagem do cabeçalho
     // header.style.backgroundImage = 'url(caminho_para_sua_imagem)';
-  } else if (scrollPosition < 100) {
+  } else if (scrollPosition < 650) {
     imgOriginal.src = "assets/img/logo_white.png";
     // Voltar para a imagem original do cabeçalho
     // header.style.backgroundImage = 'url(caminho_para_sua_imagem_original)';
   }
 });
+
 
 /*==================== DARK LIGHT THEME ====================*/
 const themeButton = document.getElementById("theme-button");
