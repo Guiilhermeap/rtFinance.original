@@ -25,12 +25,12 @@
 /* ============== DARK =======================*/
 body.dark-theme {
   --bg-color: hsl(var(--color-base), 0%, 14%);
-  --bg-color-2: hsl(var(--color-base), 40%, 30%);
+  --bg-color-2: hsl(var(--color-base), 40%, 40%);
   --color-texto-body: hsl(var(--color-base), 0%, 90%);
   --color-texto-body-2: hsl(var(--color-base), 0%, 14%);
   --color-texto-span: hsl(var(--color-base), 0%, 100%);
   --color-texto-span-hover: hsl(var(--color-base), 0%, 10%);
-  --bg-span: hsl(var(--color-base), 40%, 32%);
+  --bg-span: hsl(var(--color-base), 40%, 42%);
   --color-texto-sombra: hsl(var(--color-base), 10%, 30%);
   --bg-button-hover: hsl(var(--color-base), 10%, 0%);
   --color-button-hover: hsl(var(--color-base), 100%, 100%);
@@ -908,23 +908,17 @@ select {
   padding: 2em 6em 0 6em;
   width: 60%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
 }
 
 .text__simulador .text__inv {
   font-size: 30px;
   text-transform: uppercase;
-  text-align: end;
+  text-align: justify;
   color: var(--color-texto-body);
 }
 
-.text__simulador .text__invs {
-  font-size: 26px;
-  text-align: end;
-  text-transform: uppercase;
-  color: var(--color-texto-body);
-}
 .text__invss {
   font-size: 22px;
   text-align: end;
@@ -937,28 +931,12 @@ select {
   color: var(--bg-color-2);
 }
 
-.text__simulador .text__invs span {
-  transition: all ease-in 0.4s;
-  color: var(--bg-color-2);
-}
-.text__invss span {
-  transition: all ease-in 0.4s;
-  color: var(--bg-color-2);
-}
 
 .text__simulador .text__inv span:hover {
   transition: all ease-in 0.4s;
   color: var(--color-texto-body);
 }
 
-.text__simulador .text__invs span:hover {
-  transition: all ease-in 0.4s;
-  color: var(--color-texto-body);
-}
-.text__invss span:hover {
-  transition: all ease-in 0.4s;
-  color: var(--color-texto-body);
-}
 
 .icon__ {
   width: auto;
