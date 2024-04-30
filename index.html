@@ -5,42 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RT FINANCE</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script
-    type="text/javascript"
-    src="https://www.gstatic.com/charts/loader.js"
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
     ></script>
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <link
-    rel="stylesheet"
-    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
-    
-    
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="assets/js/country-list.js"></script>
     <script src="assets/js/simuladorInves.js"></script>
     <script
-    src="https://kit.fontawesome.com/8f33dbb147.js"
-    crossorigin="anonymous"
+      src="https://kit.fontawesome.com/8f33dbb147.js"
+      crossorigin="anonymous"
     ></script>
   </head>
-  
+
   <body>
-    
     <!--====================== NAV BAR ============================-->
     <header class="header__nav" id="header">
       <div class="nav__border" id="nav">
         <div class="img">
-          <img
-            src="assets/img/logo_white.png"
-            class="logo"
-            id="img"
-            alt="#"
-          />
+          <img src="assets/img/logo_white.png" class="logo" id="img" alt="#" />
         </div>
         <a href="#"><p>rt finance</p></a>
         <nav class="nav__menu" id="nav-menu">
@@ -142,48 +136,43 @@
             <p>Deixe o seu comentário também</p>
           </div>
 
+          <div class="card__retorno">
+            <div class="comentario__autor" id="comentario-autor">
+              <p id="comments"></p>
+            </div>
+          </div>
+
           <div class="card__inserir">
             <div class="container">
               <div id="alert" style="display: none"></div>
               <form id="commentForm">
                 <div class="form-group">
-                  <label for="rating">Avaliação</label>
-                  <div class="input__container">
-                    <input
-                      type="radio"
-                      id="rating1"
-                      name="rating"
-                      value="1"
-                      required
-                    /><label for="rating1"></label>
-                    <input
-                      type="radio"
-                      id="rating2"
-                      name="rating"
-                      value="2"
-                    /><label for="rating2"></label>
-                    <input
-                      type="radio"
-                      id="rating3"
-                      name="rating"
-                      value="3"
-                    /><label for="rating3"></label>
-                    <input
-                      type="radio"
-                      id="rating4"
-                      name="rating"
-                      value="4"
-                    /><label for="rating4"></label>
-                    <input
-                      type="radio"
-                      id="rating5"
-                      name="rating"
-                      value="5"
-                    /><label for="rating5"></label>
+                  <div class="vote">
+                    <label>
+                      <input type="radio" name="fb" value="😡" />
+                      <i class="fa"></i>
+                    </label>
+                    <label>
+                      <input type="radio" name="fb" value="😥" />
+                      <i class="fa"></i>
+                    </label>
+                    <label>
+                      <input type="radio" name="fb" value="🤔" />
+                      <i class="fa"></i>
+                    </label>
+                    <label>
+                      <input type="radio" name="fb" value="😁" />
+                      <i class="fa"></i>
+                    </label>
+                    <label>
+                      <input type="radio" name="fb" value="🤩" />
+                      <i class="fa"></i>
+                    </label>
                   </div>
+                  <div id="voto"></div>
                 </div>
                 <div class="form-group2">
-                  <label for="name">Seu Nome</label>
+                  <label for="name">Nome</label>
                   <input type="text" id="name" name="name" required />
                 </div>
                 <div class="form-group3">
@@ -192,11 +181,6 @@
                 </div>
                 <button type="submit">Enviar Comentário</button>
               </form>
-            </div>
-            <div class="card__retorno">
-              <div class="comentario__autor" id="comentario-autor">
-                <p id="comments"></p>
-              </div>
             </div>
           </div>
         </div>
@@ -293,9 +277,8 @@
               <div>
                 <p class="text__inv">
                   Simule seu <span>investimento</span> em
-                  <span>diferentes</span> poupanças.
-                  Sobrou aquele <span>dinheirinho</span> no final do mês?
-                  que tal investi-lo?
+                  <span>diferentes</span> poupanças. Sobrou aquele
+                  <span>dinheirinho</span> no final do mês? que tal investi-lo?
                   faça a <span>análise</span> você mesmo em qual poupança deseja
                   investir...
                 </p>
@@ -445,8 +428,6 @@
         <p>Copyright© 2024 rt finance</p>
       </div>
     </footer>
-
-    
   </body>
   <script src="assets/js/script.js"></script>
 </html>

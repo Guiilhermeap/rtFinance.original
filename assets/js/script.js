@@ -1,4 +1,3 @@
-
 // ========================= MUDANÇA DA BARRA DO HEADER ================================ //
 
 window.addEventListener("scroll", function () {
@@ -10,7 +9,6 @@ window.addEventListener("scroll", function () {
   var header = document.getElementById("nav");
   header.classList.toggle("sticky", this.window.scrollY > 650);
 });
-
 
 /*==================== DARK LIGHT THEME ====================*/
 const themeButton = document.getElementById("theme-button");
@@ -48,7 +46,6 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
-
 // ========================= MUDANÇA DE HEADER IMG ================================ //
 
 window.addEventListener("scroll", function () {
@@ -65,7 +62,6 @@ window.addEventListener("scroll", function () {
     // header.style.backgroundImage = 'url(caminho_para_sua_imagem_original)';
   }
 });
-
 
 // ========================= MUDAR ICON ================================ //
 
@@ -167,43 +163,81 @@ function getExchangeRate() {
 }
 
 // ================= TESTE DE COMENTÁRIOS ========================= //
-document
-  .getElementById("commentForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+// document
+//   .getElementById("commentForm")
+//   .addEventListener("submit", function (event) {
+//     event.preventDefault();
 
-    // Coleta os valores do formulário
-    var rating = document.querySelector('input[name="rating"]:checked').value;
-    var name = document.getElementById("name").value;
-    var comment = document.getElementById("comment").value;
+//     // Coleta os valores do formulário
+//     var rating = document.querySelector('input[name="rating"]:checked').value;
+//     var name = document.getElementById("name").value;
+//     var comment = document.getElementById("comment").value;
 
-    // Limpa o formulário
-    document.getElementById("commentForm").reset();
+//     // Limpa o formulário
+//     document.getElementById("commentForm").reset();
 
-    // Cria um elemento de comentário
-    var commentElement = document.createElement("div");
-    commentElement.innerHTML =
-      "<strong>" +
-      name +
-      "</strong> avaliou como " +
-      rating +
-      "/5:<br>" +
-      comment;
+//     // Cria um elemento de comentário
+//     var commentElement = document.createElement("div");
+//     commentElement.innerHTML =
+//       "<strong>" +
+//       name +
+//       "</strong> avaliou como " +
+//       rating +
+//       "/5:<br>" +
+//       comment;
 
-    // Adiciona o novo comentário à página
-    var commentsSection = document.getElementById("comments");
-    commentsSection.appendChild(commentElement);
+//     // Adiciona o novo comentário à página
+//     var commentsSection = document.getElementById("comments");
+//     commentsSection.appendChild(commentElement);
 
-    // Exibe mensagem de sucesso
-    var alert = document.getElementById("alert");
-    alert.style.display = "block";
-    alert.textContent = "Comentário enviado com sucesso!";
-    setTimeout(function () {
-      alert.style.display = "none";
-    }, 3000);
+//     // Exibe mensagem de sucesso
+//     var alert = document.getElementById("alert");
+//     alert.style.display = "block";
+//     alert.textContent = "Comentário enviado com sucesso!";
+//     setTimeout(function () {
+//       alert.style.display = "none";
+//     }, 3000);
+//   });
+$(".vote label i.fa").on("click mouseover", function () {
+  // remove classe ativa de todas as estrelas
+  $(".vote label i.fa").removeClass("active");
+  // pegar o valor do input da estrela clicada
+  var val = $(this).prev("input").val();
+  //percorrer todas as estrelas
+  $(".vote label i.fa").each(function () {
+    /* checar de o valor clicado é menor ou igual do input atual
+     *  se sim, adicionar classe active
+     */
+    var $input = $(this).prev("input");
+    if ($input.val() <= val) {
+      $(this).addClass("active");
+    }
   });
-
-
+  $("#voto").html(val); // somente para teste
+});
+//Ao sair da div vote
+$(".vote").mouseleave(function () {
+  //pegar o valor clicado
+  var val = $(this).find("input:checked").val();
+  //se nenhum foi clicado remover classe de todos
+  if (val == undefined) {
+    $(".vote label i.fa").removeClass("active");
+  } else {
+    //percorrer todas as estrelas
+    $(".vote label i.fa").each(function () {
+      /* Testar o input atual do laço com o valor clicado
+       *  se maior, remover classe, senão adicionar classe
+       */
+      var $input = $(this).prev("input");
+      if ($input.val() > val) {
+        $(this).removeClass("active");
+      } else {
+        $(this).addClass("active");
+      }
+    });
+  }
+  $("#voto").html(val); // somente para teste
+});
 
 // =================== REVELA - ANIMAÇÃO DA HOME PAGE =========================//
 
@@ -214,7 +248,7 @@ window.revelar = ScrollReveal({
 revelar.reveal(".sobre", {
   distance: "100px",
   duration: 1600,
-  delay: 150,
+  delay: 100,
   origin: "bottom",
   opacity: 0,
   scale: 1,
@@ -224,7 +258,7 @@ revelar.reveal(".sobre", {
 revelar.reveal(".comentario", {
   distance: "30px",
   duration: 1600,
-  delay: 150,
+  delay: 100,
   origin: "bottom",
   opacity: 0,
   scale: 1,
@@ -234,7 +268,7 @@ revelar.reveal(".comentario", {
 revelar.reveal(".wrapper", {
   distance: "30px",
   duration: 1600,
-  delay: 150,
+  delay: 100,
   origin: "bottom",
   opacity: 0,
   scale: 1,
@@ -244,7 +278,7 @@ revelar.reveal(".wrapper", {
 revelar.reveal(".simulacao", {
   distance: "30px",
   duration: 1600,
-  delay: 150,
+  delay: 100,
   origin: "bottom",
   opacity: 0,
   scale: 1,
@@ -254,7 +288,7 @@ revelar.reveal(".simulacao", {
 revelar.reveal(".footer__site", {
   distance: "30px",
   duration: 1600,
-  delay: 180,
+  delay: 130,
   origin: "bottom",
   opacity: 0,
   scale: 1,

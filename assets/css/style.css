@@ -399,7 +399,7 @@ body::-webkit-scrollbar-thumb {
 .comentarios__container {
   background-color: var(--bg-color-2);
   width: 100%;
-  min-height: 100vh;
+  min-height: 200vh;
 }
 
 .comentarios__header {
@@ -445,20 +445,36 @@ body::-webkit-scrollbar-thumb {
 .card__inserir {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
 }
 
 .card__inserir form {
   display: block;
   width: 40em;
-  height: 30em;
+  border: 1px solid var(--color-texto-body);
+  box-shadow: none;
   padding: 2em;
+}
+
+.card__retorno {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 3em;
+}
+
+.comentario__autor {
+  width: 90em;
+  height: 70vh;
+  background-color: var(--bg-color-2);
+  border-radius: 15px;
+  border: 1px solid var(--color-texto-body);
 }
 
 .form-group {
   display: block;
-  margin-bottom: 1em;
 }
 
 .form-group label {
@@ -492,6 +508,7 @@ body::-webkit-scrollbar-thumb {
 }
 .form-group2 label {
   font-size: 20px;
+  text-transform: uppercase;
   color: var(--color-texto-body);
 }
 
@@ -502,6 +519,7 @@ body::-webkit-scrollbar-thumb {
 
 .form-group3 label {
   font-size: 20px;
+  text-transform: uppercase;
   color: var(--color-texto-body);
 }
 
@@ -513,29 +531,47 @@ body::-webkit-scrollbar-thumb {
   padding: 0.5em;
   font-size: 18px;
   background-color: var(--bg-color);
-  color: var(--color-texto-body)
+  color: var(--color-texto-body);
 }
 
 .container button {
   margin-top: 1em;
 }
 
-.card__retorno {
-  width: 40em;
-  height: 30em;
-  background: var(--bg-color);
-  border-radius: 15px;
+.vote {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: scroll;
+  width: 100%;
 }
 
-.card__retorno p {
-  font-size: 16px;
+.vote label {
+  cursor: pointer;
+}
+.vote label input {
+  display: none;
+}
+.vote label i {
   color: var(--color-texto-body);
-
+  font-family: FontAwesome;
+  font-size: 30px;
+  transition-property: color, text;
+  transition-duration: 0.2s, 0.2s;
+  transition-timing-function: linear, ease-in;
+  -moz-transition-property: color, text;
+  -moz-transition-duration: 0.2s;
+  -moz-transition-timing-function: linear, ease-in;
+  -o-transition-property: color, text;
+  -o-transition-duration: 0.2s;
+  -o-transition-timing-function: linear, ease-in;
 }
+.vote label i:before {
+  content: "\f005";
+}
+.vote label i.active {
+  color: gold;
+}
+
 /* =========================== DICAS ================================== */
 .dicas__container {
   width: 100%;
@@ -931,12 +967,10 @@ select {
   color: var(--bg-color-2);
 }
 
-
 .text__simulador .text__inv span:hover {
   transition: all ease-in 0.4s;
   color: var(--color-texto-body);
 }
-
 
 .icon__ {
   width: auto;
