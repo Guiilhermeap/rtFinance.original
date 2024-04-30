@@ -163,41 +163,45 @@ function getExchangeRate() {
 }
 
 // ================= TESTE DE COMENTÁRIOS ========================= //
-// document
-//   .getElementById("commentForm")
-//   .addEventListener("submit", function (event) {
-//     event.preventDefault();
 
-//     // Coleta os valores do formulário
-//     var rating = document.querySelector('input[name="rating"]:checked').value;
-//     var name = document.getElementById("name").value;
-//     var comment = document.getElementById("comment").value;
+// Função para recuperar as avaliações armazenadas localmente
+function recuperarAvaliacoes() {
+  var avaliacoes = JSON.parse(localStorage.getItem("avaliacoes")) || [];
+  avaliacoes.forEach(function (avaliacao) {
+    adicionarAutorCard(avaliacao.stars);
+  });
+}
 
-//     // Limpa o formulário
-//     document.getElementById("commentForm").reset();
+// Função para adicionar uma nova autor_card
+function adicionarAutorCard(stars) {
+  var starsText = "";
+  var autor = document.getElementById("name");
+  var coment = document.getElementById("comment");
+  var autorRet = document.getElementById("autor");
+  var comentRet = document.getElementById("coment");
 
-//     // Cria um elemento de comentário
-//     var commentElement = document.createElement("div");
-//     commentElement.innerHTML =
-//       "<strong>" +
-//       name +
-//       "</strong> avaliou como " +
-//       rating +
-//       "/5:<br>" +
-//       comment;
+  for (var i = 0; i < stars; i++) {
+    starsText += "⭐";
+  }
+  autorRet.value = autor;
+  comentRet.value = coment;
 
-//     // Adiciona o novo comentário à página
-//     var commentsSection = document.getElementById("comments");
-//     commentsSection.appendChild(commentElement);
+  var autorCardHTML = `
+    <div class="autor-card">
+          <p id="estrela">${starsText}</p>
+          <p id="autor">${autor}</p>
+          <p id="coment">${coment}</p>
+      </div>
+  `;
 
-//     // Exibe mensagem de sucesso
-//     var alert = document.getElementById("alert");
-//     alert.style.display = "block";
-//     alert.textContent = "Comentário enviado com sucesso!";
-//     setTimeout(function () {
-//       alert.style.display = "none";
-//     }, 3000);
-//   });
+  $("#autor-card").append(autorCardHTML);
+}
+
+// Ao carregar a página, recuperar as avaliações armazenadas localmente
+$(document).ready(function () {
+  recuperarAvaliacoes();
+});
+
 $(".vote label i.fa").on("click mouseover", function () {
   // remove classe ativa de todas as estrelas
   $(".vote label i.fa").removeClass("active");
@@ -213,7 +217,17 @@ $(".vote label i.fa").on("click mouseover", function () {
       $(this).addClass("active");
     }
   });
-  $("#voto").html(val); // somente para teste
+  if (val == 1) {
+    $("#voto").html("'😡' HORRÍVEL!!");
+  } else if (val == 2) {
+    $("#voto").html("'😠' NÃO CURTI");
+  } else if (val == 3) {
+    $("#voto").html("'😐' NADA DEMAIS");
+  } else if (val == 4) {
+    $("#voto").html("'😊' CURTI BASTANTE");
+  } else if (val == 5) {
+    $("#voto").html("'🤩' PERFEITOO!!");
+  }
 });
 //Ao sair da div vote
 $(".vote").mouseleave(function () {
@@ -236,7 +250,17 @@ $(".vote").mouseleave(function () {
       }
     });
   }
-  $("#voto").html(val); // somente para teste
+  $("#voto").html("precisamos da sua avaliação"); // somente para teste
+});
+
+$("#exibirEstrelas").on("click", function () {
+  var selectedStars = $(".vote label i.fa.active").length;
+  adicionarAutorCard(selectedStars);
+
+  // Armazenar a avaliação localmente
+  var avaliacoes = JSON.parse(localStorage.getItem("avaliacoes")) || [];
+  avaliacoes.push({ stars: selectedStars });
+  localStorage.setItem("avaliacoes", JSON.stringify(avaliacoes));
 });
 
 // =================== REVELA - ANIMAÇÃO DA HOME PAGE =========================//

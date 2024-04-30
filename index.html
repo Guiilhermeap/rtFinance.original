@@ -22,7 +22,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="assets/js/country-list.js"></script>
-    <script src="assets/js/simuladorInves.js"></script>
+    <!-- <script src="assets/js/simuladorInves.js"></script> -->
     <script
       src="https://kit.fontawesome.com/8f33dbb147.js"
       crossorigin="anonymous"
@@ -138,7 +138,13 @@
 
           <div class="card__retorno">
             <div class="comentario__autor" id="comentario-autor">
-              <p id="comments"></p>
+              <div class="autor_coment">
+                <div id="autor-card">
+                  <p id="estrela"></p>
+                  <p id="autor"></p>
+                  <p id="coment"></p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -149,23 +155,23 @@
                 <div class="form-group">
                   <div class="vote">
                     <label>
-                      <input type="radio" name="fb" value="😡" />
+                      <input type="radio" name="fb" value="1" />
                       <i class="fa"></i>
                     </label>
                     <label>
-                      <input type="radio" name="fb" value="😥" />
+                      <input type="radio" name="fb" value="2" />
                       <i class="fa"></i>
                     </label>
                     <label>
-                      <input type="radio" name="fb" value="🤔" />
+                      <input type="radio" name="fb" value="3" />
                       <i class="fa"></i>
                     </label>
                     <label>
-                      <input type="radio" name="fb" value="😁" />
+                      <input type="radio" name="fb" value="4" />
                       <i class="fa"></i>
                     </label>
                     <label>
-                      <input type="radio" name="fb" value="🤩" />
+                      <input type="radio" name="fb" value="5" />
                       <i class="fa"></i>
                     </label>
                   </div>
@@ -179,7 +185,7 @@
                   <label for="comment">Comentário</label>
                   <textarea id="comment" name="comment" required></textarea>
                 </div>
-                <button type="submit">Enviar Comentário</button>
+                <button type="submit" id="exibirEstrelas">Enviar Comentário</button>
               </form>
             </div>
           </div>
