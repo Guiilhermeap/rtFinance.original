@@ -6,7 +6,7 @@ let selicValue = null;
 async function fetchData() {
   try {
     const response = await fetch(apiUrl);
-
+1
     if (!response.ok) {
       throw new Error("Erro na requisição: ", $(Response.statusText));
     }
