@@ -162,86 +162,85 @@ function getExchangeRate() {
     });
 }
 
-// ================= TESTE DE COMENTÁRIOS ========================= //
+// ================= COMENTÁRIOS ========================= //
 
-// Função para recuperar as avaliações armazenadas localmente
-function recuperarAvaliacoes() {
-  var avaliacoes = JSON.parse(localStorage.getItem("avaliacoes")) || [];
+// Função para recuperar as avaliações e outros dados armazenados localmente
+function recuperarDadosLocais() {
+  var dadosLocais = JSON.parse(localStorage.getItem("dadosLocais")) || {};
+  var avaliacoes = dadosLocais.avaliacoes || [];
+  var autor = dadosLocais.autor || "";
+  var coment = dadosLocais.coment || "";
+
   avaliacoes.forEach(function (avaliacao) {
-    adicionarAutorCard(avaliacao.stars);
+    adicionarAutorCard(avaliacao.stars, autor, coment);
   });
+
+  // Preencher os campos de nome e comentário
+  document.getElementById("name").value = autor;
+  document.getElementById("comment").value = coment;
 }
 
 // Função para adicionar uma nova autor_card
-function adicionarAutorCard(stars) {
+function adicionarAutorCard(stars, autor, coment) {
   var starsText = "";
-  var autor = document.getElementById("name");
-  var coment = document.getElementById("comment");
-  var autorRet = document.getElementById("autor");
-  var comentRet = document.getElementById("coment");
 
   for (var i = 0; i < stars; i++) {
     starsText += "⭐";
   }
-  autorRet.value = autor;
-  comentRet.value = coment;
 
   var autorCardHTML = `
     <div class="autor-card">
-          <p id="estrela">${starsText}</p>
-          <p id="autor">${autor}</p>
-          <p id="coment">${coment}</p>
-      </div>
+      <p id="estrela">${starsText}</p>
+      <p id="autor">${autor}</p>
+      <p id="coment">${coment}</p>
+    </div>
   `;
 
   $("#autor-card").append(autorCardHTML);
 }
 
-// Ao carregar a página, recuperar as avaliações armazenadas localmente
+// Ao carregar a página, recuperar as avaliações e outros dados armazenados localmente
 $(document).ready(function () {
-  recuperarAvaliacoes();
+  recuperarDadosLocais();
 });
 
+// Evento de clique/mouseover nas estrelas de votação
 $(".vote label i.fa").on("click mouseover", function () {
-  // remove classe ativa de todas as estrelas
+  // Remover classe ativa de todas as estrelas
   $(".vote label i.fa").removeClass("active");
-  // pegar o valor do input da estrela clicada
+  // Pegar o valor do input da estrela clicada
   var val = $(this).prev("input").val();
-  //percorrer todas as estrelas
+  // Percorrer todas as estrelas
   $(".vote label i.fa").each(function () {
-    /* checar de o valor clicado é menor ou igual do input atual
-     *  se sim, adicionar classe active
-     */
+    // Checar se o valor clicado é menor ou igual do input atual, se sim, adicionar classe active
     var $input = $(this).prev("input");
     if ($input.val() <= val) {
       $(this).addClass("active");
     }
   });
+  // Atualizar a mensagem com base na avaliação selecionada
   if (val == 1) {
-    $("#voto").html("'😡' HORRÍVEL!!");
+    $("#voto").html("😡 HORRÍVEL!!");
   } else if (val == 2) {
-    $("#voto").html("'😠' NÃO CURTI");
+    $("#voto").html("😠 NÃO CURTI");
   } else if (val == 3) {
-    $("#voto").html("'😐' NADA DEMAIS");
+    $("#voto").html("😐 NADA DEMAIS");
   } else if (val == 4) {
-    $("#voto").html("'😊' CURTI BASTANTE");
+    $("#voto").html("😊 CURTI BASTANTE");
   } else if (val == 5) {
-    $("#voto").html("'🤩' PERFEITOO!!");
+    $("#voto").html("🤩 PERFEITOO!!");
   }
 });
-//Ao sair da div vote
+
+// Ao sair da div vote
 $(".vote").mouseleave(function () {
-  //pegar o valor clicado
   var val = $(this).find("input:checked").val();
-  //se nenhum foi clicado remover classe de todos
+  // Se nenhum foi clicado, remover classe de todos
   if (val == undefined) {
     $(".vote label i.fa").removeClass("active");
   } else {
-    //percorrer todas as estrelas
+    // Percorrer todas as estrelas e atualizar as classes
     $(".vote label i.fa").each(function () {
-      /* Testar o input atual do laço com o valor clicado
-       *  se maior, remover classe, senão adicionar classe
-       */
       var $input = $(this).prev("input");
       if ($input.val() > val) {
         $(this).removeClass("active");
@@ -250,17 +249,24 @@ $(".vote").mouseleave(function () {
       }
     });
   }
-  $("#voto").html("precisamos da sua avaliação"); // somente para teste
+  $("#voto").html("precisamos da sua avaliação"); // Somente para teste
 });
 
+// Evento de clique no botão para exibir estrelas
 $("#exibirEstrelas").on("click", function () {
   var selectedStars = $(".vote label i.fa.active").length;
-  adicionarAutorCard(selectedStars);
+  var autor = document.getElementById("name").value;
+  var coment = document.getElementById("comment").value;
+  
+  adicionarAutorCard(selectedStars, autor, coment);
 
-  // Armazenar a avaliação localmente
-  var avaliacoes = JSON.parse(localStorage.getItem("avaliacoes")) || [];
-  avaliacoes.push({ stars: selectedStars });
-  localStorage.setItem("avaliacoes", JSON.stringify(avaliacoes));
+  // Armazenar a avaliação e outros dados localmente
+  var avaliacoes = JSON.parse(localStorage.getItem("dadosLocais")) || {};
+  avaliacoes.avaliacoes = avaliacoes.avaliacoes || [];
+  avaliacoes.avaliacoes.push({ stars: selectedStars });
+  avaliacoes.autor = autor;
+  avaliacoes.coment = coment;
+  localStorage.setItem("dadosLocais", JSON.stringify(avaliacoes));
 });
 
 // =================== REVELA - ANIMAÇÃO DA HOME PAGE =========================//
