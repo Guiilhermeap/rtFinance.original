@@ -124,53 +124,41 @@
       <!-- ================== COMENTÁRIOS ===================== -->
 
       <div class="comentarios__container" id="comentarios">
+        <div class="comentarios__header">
+          <div class="comentarios__barra">
+            <h1>Comentários</h1>
+          </div>
+        </div>
+
+        <div class="txt__comentario">
+          <h1>Veja o comentário de quem utilizou nossos serviços !!!</h1>
+          <p>Deixe o seu comentário também</p>
+        </div>
+
         <div class="comentario">
-          <div class="comentarios__header">
-            <div class="comentarios__barra">
-              <h1>Comentários</h1>
-            </div>
-          </div>
-
-          <div class="txt__comentario">
-            <h1>Veja o comentário de quem utilizou nossos serviços !!!</h1>
-            <p>Deixe o seu comentário também</p>
-          </div>
-
-          <div class="card__retorno">
-            <div class="comentario__autor" id="comentario-autor">
-              <div class="autor_coment">
-                <div id="autor-card">
-                  <p id="estrela"></p>
-                  <p id="autor"></p>
-                  <p id="coment"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div class="card__inserir">
             <div class="container">
               <div id="alert" style="display: none"></div>
               <form id="commentForm">
                 <div class="form-group">
                   <div class="vote">
-                    <label>
+                    <label class="estrela">
                       <input type="radio" name="fb" value="1" />
                       <i class="fa" id="starI"></i>
                     </label>
-                    <label>
+                    <label class="estrela">
                       <input type="radio" name="fb" value="2" />
                       <i class="fa" id="starI"></i>
                     </label>
-                    <label>
+                    <label class="estrela">
                       <input type="radio" name="fb" value="3" />
                       <i class="fa" id="starI"></i>
                     </label>
-                    <label>
+                    <label class="estrela">
                       <input type="radio" name="fb" value="4" />
                       <i class="fa" id="starI"></i>
                     </label>
-                    <label>
+                    <label class="estrela">
                       <input type="radio" name="fb" value="5" />
                       <i class="fa" id="starI"></i>
                     </label>
@@ -178,15 +166,28 @@
                   <div id="voto"></div>
                 </div>
                 <div class="form-group2">
-                  <label for="name">Nome</label>
+                  <label class="txt__name">Nome</label>
                   <input type="text" id="name" name="name" required />
                 </div>
                 <div class="form-group3">
                   <label for="comment">Comentário</label>
                   <textarea id="comment" name="comment" required></textarea>
                 </div>
-                <button type="submit" id="exibirEstrelas">Enviar Comentário</button>
+                <button type="submit" id="exibirEstrelas">
+                  Enviar Comentário
+                </button>
               </form>
+            </div>
+            <div class="card__retorno">
+              <div class="comentario__autor" id="comentario-autor">
+                <div class="autor_coment">
+                  <div id="autor-card">
+                    <p id="estrela"></p>
+                    <p id="autor"></p>
+                    <p id="coment"></p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
