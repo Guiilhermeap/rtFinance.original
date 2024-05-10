@@ -269,7 +269,7 @@ $("#exibirEstrelas").on("click", function () {
   localStorage.setItem("dadosLocais", JSON.stringify(avaliacoes));
 });
 
-// =================== REVELA - ANIMAÇÃO DA HOME PAGE =========================//
+// =================== REVELAR - ANIMAÇÃO DA HOME PAGE =========================//
 
 window.revelar = ScrollReveal({
   reset: true,
@@ -277,7 +277,7 @@ window.revelar = ScrollReveal({
 
 revelar.reveal(".sobre", {
   distance: "100px",
-  duration: 1600,
+  duration: 1100,
   delay: 100,
   origin: "bottom",
   opacity: 0,
@@ -285,9 +285,9 @@ revelar.reveal(".sobre", {
   easing: "cubic-bezier(0.5, 0, 0, 1)",
 });
 
-revelar.reveal(".comentario", {
+revelar.reveal(".comentarios__container", {
   distance: "30px",
-  duration: 1600,
+  duration: 1100,
   delay: 100,
   origin: "bottom",
   opacity: 0,
@@ -297,7 +297,7 @@ revelar.reveal(".comentario", {
 
 revelar.reveal(".wrapper", {
   distance: "30px",
-  duration: 1600,
+  duration: 1100,
   delay: 100,
   origin: "bottom",
   opacity: 0,
@@ -307,7 +307,7 @@ revelar.reveal(".wrapper", {
 
 revelar.reveal(".simulacao", {
   distance: "30px",
-  duration: 1600,
+  duration: 1100,
   delay: 100,
   origin: "bottom",
   opacity: 0,
@@ -317,8 +317,18 @@ revelar.reveal(".simulacao", {
 
 revelar.reveal(".footer__site", {
   distance: "30px",
-  duration: 1600,
-  delay: 130,
+  duration: 1100,
+  delay: 100,
+  origin: "bottom",
+  opacity: 0,
+  scale: 1,
+  easing: "cubic-bezier(0.5, 0, 0, 1)",
+});
+
+revelar.reveal(".especialista__container", {
+  distance: "150px",
+  duration: 1100,
+  delay: 200,
   origin: "bottom",
   opacity: 0,
   scale: 1,

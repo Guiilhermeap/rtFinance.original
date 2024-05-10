@@ -1075,6 +1075,30 @@ select {
   padding-top: 4rem;
 }
 
+.especialista__sobre {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 8em 0 0 10em;
+}
+
+.especialista__img {
+  width: 40em;
+  height: 40em;
+  border-radius: 50%;
+  background-color: var(--bg-color-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.especialista__img img {
+  width: 40em;
+  height: 40em;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 /* =========== Dowload Planilha =========== */
 .about_buttons {
   display: flex;
