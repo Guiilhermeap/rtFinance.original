@@ -27,7 +27,7 @@
 /* ============== DARK =======================*/
 body.dark-theme {
   --bg-color: hsl(var(--color-base), 0%, 14%);
-  --bg-color-2: hsl(var(--color-base), 40%, 40%);
+  --bg-color-2: hsl(var(--color-base), 70%, 15%);
   --color-texto-body: hsl(var(--color-base), 0%, 90%);
   --color-texto-body-2: hsl(var(--color-base), 0%, 14%);
   --color-texto-span: hsl(var(--color-base), 0%, 100%);
@@ -445,17 +445,19 @@ body::-webkit-scrollbar-thumb {
   text-transform: uppercase;
 }
 
-.comentario {
+.comentario_form {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+
 }
 
 .card__inserir {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
+  padding: 0 15em;
 }
 
 .card__inserir form {
