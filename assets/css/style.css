@@ -7,37 +7,39 @@
 
 /* =================== VARIAVEIS ======================== */
 :root {
-  --color-base: 148;
+  --color-primaria: 148;
 
-  --bg-color: hsl(var(--color-base), 0%, 100%);
-  --bg-color-2: hsl(var(--color-base), 100%, 50%);
-  --color-texto-nav: hsl(var(--color-base), 0%, 100%);
-  --color-texto-body: hsl(var(--color-base), 0%, 0%);
-  --color-texto-body-2: hsl(var(--color-base), 0%, 0%);
-  --color-texto-span: hsl(var(--color-base), 0%, 100%);
-  --color-texto-span-hover: hsl(var(--color-base), 0%, 10%);
-  --bg-span: hsl(var(--color-base), 100%, 50%);
+  --bg-color: hsl(var(--color-primaria), 0%, 86%);
+  --bg-color-2: hsl(var(--color-primaria), 90%, 50%);
+  --color-texto-nav: hsl(var(--color-primaria), 0%, 100%);
+  --color-texto-body: hsl(var(--color-primaria), 0%, 14%);
+  --color-texto-body-2: hsl(var(--color-primaria), 0%, 14%);
+  --color-texto-span: hsl(var(--color-primaria), 0%, 100%);
+  --color-texto-span-hover: hsl(var(--color-primaria), 0%, 10%);
+  --bg-span: hsl(var(--color-primaria), 100%, 50%);
   --color-texto-sombra: var(--bg-color-2);
-  --bg-button-hover: hsl(var(--color-base), 100%, 5%);
-  --color-button-hover: hsl(var(--color-base), 100%, 100%);
-  --color-text-coment: hsl(var(--color-base), 0%, 100%);
+  --bg-button-hover: hsl(var(--color-primaria), 100%, 0%);
+  --color-button-hover: hsl(var(--color-primaria), 100%, 100%);
+  --color-text-coment: hsl(var(--color-primaria), 0%, 100%);
+  --bg-especialista: hsl(var(--color-primaria), 0%, 20%);
   --color-hover-button-theme: hsl(207, 100%, 80%);
 }
 
 /* ============== DARK =======================*/
 body.dark-theme {
-  --bg-color: hsl(var(--color-base), 0%, 14%);
-  --bg-color-2: hsl(var(--color-base), 70%, 15%);
-  --color-texto-body: hsl(var(--color-base), 0%, 90%);
-  --color-texto-body-2: hsl(var(--color-base), 0%, 14%);
-  --color-texto-span: hsl(var(--color-base), 0%, 100%);
-  --color-texto-span-hover: hsl(var(--color-base), 0%, 10%);
-  --bg-span: hsl(var(--color-base), 40%, 42%);
-  --color-texto-sombra: hsl(var(--color-base), 10%, 30%);
-  --bg-button-hover: hsl(var(--color-base), 10%, 0%);
-  --color-button-hover: hsl(var(--color-base), 100%, 100%);
+  --bg-color: hsl(var(--color-primaria), 0%, 14%);
+  --bg-color-2: hsl(var(--color-primaria), 100%, 40%);
+  --color-texto-body: hsl(var(--color-primaria), 0%, 86%);
+  --color-texto-body-2: hsl(var(--color-primaria), 0%, 14%);
+  --color-texto-span: hsl(var(--color-primaria), 0%, 100%);
+  --color-texto-span-hover: hsl(var(--color-primaria), 0%, 10%);
+  --bg-span: var(--bg-color-2);
+  --color-texto-sombra: hsl(var(--color-primaria), 10%, 30%);
+  --bg-button-hover: hsl(var(--color-primaria), 10%, 0%);
+  --color-button-hover: hsl(var(--color-primaria), 100%, 100%);
   --color-hover-button-theme: hsl(59, 100%, 80%);
-  --color-text-coment: hsl(var(--color-base), 0%, 0%);
+  --color-text-coment: hsl(var(--color-primaria), 0%, 0%);
+  --bg-especialista: hsl(var(--color-primaria), 0%, 90%);
 }
 
 /* ================== button dark ========================= */
@@ -449,7 +451,6 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
 
 .card__inserir {
@@ -464,16 +465,18 @@ body::-webkit-scrollbar-thumb {
   display: block;
   width: auto;
   border: 1px solid var(--color-texto-body);
+  background-color: var(--bg-color);
+  color: var(--color-texto-body);
   box-shadow: none;
   padding: 2em;
-  height: 30em;
+  height: 35em;
 }
 
 .card__retorno {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30em;
+  height: 35em;
   width: 45em;
 }
 
@@ -503,8 +506,9 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: var(--bg-color);
+  background-color: var(--color-texto-body);
   border-radius: 15px;
+  border: 1px solid var(--bg-color);
 }
 
 #autor-card {
@@ -512,36 +516,35 @@ body::-webkit-scrollbar-thumb {
 }
 
 .autor-card {
-  background-color: var(--color-texto-body);
   margin: 2em;
-  border-radius: 10px;
   padding: 0.5em 10em 1em 1em;
+  border: 1px solid var(--bg-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
 }
 
 .autor-card p {
-  color: var(--color-text-coment);
+  color: var(--color-texto-body);
   font-size: 20px;
-  margin: 1em;
-  text-transform: uppercase;
-  border: 1px solid var(--color-text-coment);
-  padding: 0.2em;
-  border-radius: 5px;
+  margin-bottom: 0.5em;
 }
 
 .autor-card #estrela {
   border: none;
   padding: 0;
+  font-size: 22px;
+  filter: drop-shadow(3px 3px 2px var(--color-texto-body-2));
 }
 
 #commentForm .estrela {
   font-size: 20px;
   color: var(--color-texto-body);
-  margin: 0;
+  margin: 0.5em;
+  margin-bottom: 1em;
 }
 
 .form-group2 {
   display: block;
-  
 }
 
 .form-group2 label {
@@ -551,6 +554,18 @@ body::-webkit-scrollbar-thumb {
 }
 .form-group2 input {
   margin: 0.5em 0 2em 0;
+  background-color: var(--bg-color);
+  color: var(--color-texto-body);
+  font-weight: 400;
+  border: 1px solid var(--color-texto-body);
+}
+
+.form-group2 input:focus {
+  margin: 0.5em 0 2em 0;
+  background-color: var(--bg-color);
+  color: var(--color-texto-body);
+  font-weight: 400;
+  border: 2px solid var(--color-texto-body);
 }
 
 .form-group3 {
@@ -573,14 +588,17 @@ body::-webkit-scrollbar-thumb {
   font-size: 18px;
   background-color: var(--bg-color);
   color: var(--color-texto-body);
-  margin: 0.5em 0 1em 0;
+  margin: 0.5em 0 3em 0;
+}
+
+.form-group3 textarea:focus {
+  border: 1px solid var(--bg-color-2);
 }
 
 #comment {
   max-width: 100%;
   height: 6em;
 }
-
 
 .vote {
   display: flex;
@@ -720,7 +738,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 600;
   font-size: 50px;
   line-height: 25px;
-  color: var(--color-texto);
+  color: var(--color-texto-body-2);
   position: relative;
   padding-top: 4rem;
 }
@@ -1077,26 +1095,84 @@ select {
 
 .especialista__sobre {
   display: flex;
-  align-items: center;
-  justify-content: start;
-  margin: 8em 0 0 10em;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  padding: 0 10em;
 }
 
 .especialista__img {
   width: 40em;
   height: 40em;
-  border-radius: 50%;
+  padding-top: 3em;
+}
+
+.blob {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--bg-color-2);
+}
+
+.blob__img {
+  width: 100%;
+  height: 13em;
+  margin-right: 2em;
+  object-fit: cover;
+}
+
+.especialista__sobre__saiba {
+  width: 100%;
+  height: 100%;
+  padding: 0 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.especialista__title {
+  font-size: 40px;
+  color: var(--color-texto-body);
+  text-transform: uppercase;
+  padding-bottom: 1em;
+}
+
+.especialista__descricao {
+  font-size: 20px;
+  color: var(--color-texto-body);
+  text-align: justify;
+  padding-bottom: 10em;
+}
+
+.especialista__saibMais {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.especialista__saibMais a {
+  text-decoration: none;
+  padding: 0.5em 1em;
+  width: 16em;
+  height: 2.6em;
   background-color: var(--bg-color-2);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 22px;
+  border-radius: 10px;
+  color: var(--color-texto-body);
 }
 
-.especialista__img img {
-  width: 40em;
-  height: 40em;
-  border-radius: 50%;
-  object-fit: cover;
+.especialista__saibMais a:hover {
+  background-color: var(--bg-button-hover);
+  transition: all ease-in 0.2s;
+  color: var(--color-button-hover);
 }
 
 /* =========== Dowload Planilha =========== */
@@ -1299,7 +1375,7 @@ svg {
     display: block;
     top: 1em;
     transform: translateY(-50%);
-    color: var(--color-base);
+    color: var(--color-primaria);
   }
   .close__menu {
     display: none;
@@ -1421,7 +1497,7 @@ svg {
     position: absolute;
     width: 100%;
     padding: 2em;
-    margin-bottom: 30em;
+    margin-bottom: 35em;
   }
 
   .text__conversor .text__real {
@@ -1626,7 +1702,7 @@ svg {
     display: block;
     top: 1em;
     transform: translateY(-50%);
-    color: var(--color-base);
+    color: var(--color-primaria);
   }
   .close__menu {
     display: none;
@@ -1748,7 +1824,7 @@ svg {
     position: absolute;
     width: 100%;
     padding: 2em;
-    margin-bottom: 30em;
+    margin-bottom: 35em;
   }
 
   .text__conversor .text__real {
