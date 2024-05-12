@@ -16,7 +16,7 @@
   --color-texto-body-2: hsl(var(--color-primaria), 0%, 14%);
   --color-texto-span: hsl(var(--color-primaria), 0%, 100%);
   --color-texto-span-hover: hsl(var(--color-primaria), 0%, 10%);
-  --bg-span: hsl(var(--color-primaria), 100%, 50%);
+  --bg-span: hsl(var(--color-primaria), 90%, 48%);
   --color-texto-sombra: var(--bg-color-2);
   --bg-button-hover: hsl(var(--color-primaria), 100%, 0%);
   --color-button-hover: hsl(var(--color-primaria), 100%, 100%);
@@ -33,7 +33,7 @@ body.dark-theme {
   --color-texto-body-2: hsl(var(--color-primaria), 0%, 14%);
   --color-texto-span: hsl(var(--color-primaria), 0%, 100%);
   --color-texto-span-hover: hsl(var(--color-primaria), 0%, 10%);
-  --bg-span: var(--bg-color-2);
+  --bg-span: hsl(var(--color-primaria), 100%, 38%);
   --color-texto-sombra: hsl(var(--color-primaria), 10%, 30%);
   --bg-button-hover: hsl(var(--color-primaria), 10%, 0%);
   --color-button-hover: hsl(var(--color-primaria), 100%, 100%);
