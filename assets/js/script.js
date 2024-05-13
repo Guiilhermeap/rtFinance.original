@@ -277,7 +277,7 @@ window.revelar = ScrollReveal({
 
 revelar.reveal(".sobre", {
   distance: "100px",
-  duration: 1100,
+  duration: 950,
   delay: 100,
   origin: "bottom",
   opacity: 0,
@@ -287,7 +287,7 @@ revelar.reveal(".sobre", {
 
 revelar.reveal(".comentarios__container", {
   distance: "30px",
-  duration: 1100,
+  duration: 950,
   delay: 100,
   origin: "bottom",
   opacity: 0,
@@ -297,7 +297,7 @@ revelar.reveal(".comentarios__container", {
 
 revelar.reveal(".wrapper", {
   distance: "30px",
-  duration: 1100,
+  duration: 950,
   delay: 100,
   origin: "bottom",
   opacity: 0,
@@ -307,7 +307,7 @@ revelar.reveal(".wrapper", {
 
 revelar.reveal(".simulacao", {
   distance: "30px",
-  duration: 1100,
+  duration: 950,
   delay: 100,
   origin: "bottom",
   opacity: 0,
@@ -317,7 +317,7 @@ revelar.reveal(".simulacao", {
 
 revelar.reveal(".footer__site", {
   distance: "30px",
-  duration: 1100,
+  duration: 950,
   delay: 100,
   origin: "bottom",
   opacity: 0,
@@ -327,9 +327,9 @@ revelar.reveal(".footer__site", {
 
 revelar.reveal(".especialista__container", {
   distance: "150px",
-  duration: 1100,
+  duration: 950,
   delay: 200,
-  origin: "bottom",
+  origin: "right",
   opacity: 0,
   scale: 1,
   easing: "cubic-bezier(0.5, 0, 0, 1)",
