@@ -269,6 +269,8 @@ $("#exibirEstrelas").on("click", function () {
   localStorage.setItem("dadosLocais", JSON.stringify(avaliacoes));
 });
 
+// 
+
 // =================== REVELAR - ANIMAÇÃO DA HOME PAGE =========================//
 
 window.revelar = ScrollReveal({
