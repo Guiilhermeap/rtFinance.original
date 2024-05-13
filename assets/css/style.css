@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 /*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"); */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 /* ==================== VARIAVEIS FONTES ======================== */
 :root {
@@ -16,12 +16,7 @@
   /* titulo Sobre*/
   --font-title-sobre: "Kode Mono", monospace;
   --font-title-sobre-weight: 700;
-
-
 }
-
-
-
 
 /* =================== VARIAVEIS COLORS ======================== */
 :root {
@@ -628,7 +623,6 @@ body::-webkit-scrollbar-thumb {
 #comment {
   max-width: 100%;
   height: 6em;
-  
 }
 
 .vote {
@@ -1326,7 +1320,7 @@ svg {
 
 /* ========================= ÁREA DE RESPONSIVIDADE =============================== */
 
-/* ==== mobile ===== */
+/* ==== Tablet ===== */
 @media only screen and (max-width: 767px) {
   .header__nav {
     height: 6em;
@@ -1626,18 +1620,77 @@ svg {
   }
 
   /* =========== COMENTÁRIOS =========== */
-  .comentarios__container {
-    padding: 0 2em;
+  /* ==========================comentarios======================-=== */
+
+  .comentarios__barra h1 {
+    font-family: var(--font-title);
+    font-weight: var(--font-title-weight);
+    color: var(--color-texto-body);
   }
-  .comentarios__header {
-    height: 7em;
-    margin: 0em;
+
+  .txt__comentario h1 {
+    font-size: 25px;
     padding: 0;
   }
-  .comentarios__barra h1 {
-    font-size: 30px;
-    padding-top: 4rem;
+  .txt__comentario p {
+    font-size: 20px;
   }
+
+  .card__inserir {
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .card__inserir form {
+    padding: 2em;
+    height: auto;
+    max-width: 100%;
+    
+  }
+
+  #commentForm {
+    margin: 0;
+    margin-bottom: 2em;
+  }
+
+  .card__retorno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20em;
+    width: 100%;
+    padding: 0 4.5em;
+    margin-bottom: 3em;
+  }
+
+  
+  #commentForm .estrela {
+    margin-bottom: 0.5em;
+  }
+  
+  .form-group2 input {
+    margin: 0.5em 0 1em 0;
+  }
+
+
+  .form-group3 textarea {
+    margin: 0.5em 0 2em 0;
+  }
+
+  .form-group3 textarea:focus {
+    border: 1px solid var(--bg-color-2);
+  }
+
+  #comment {
+    max-width: 100%;
+    height: 6em;
+  }
+
+  
 
   /*==================== FOOTER ====================*/
   .copy__container {
