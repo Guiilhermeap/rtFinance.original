@@ -191,7 +191,7 @@ function adicionarAutorCard(stars, autor, coment) {
   var autorCardHTML = `
     <div class="autor-card">
       <p id="estrela">${starsText}</p>
-      <p id="autor">${autor}</p>
+      <p id="autor">RESPONSÁVEL:  ${autor}</p>
       <p id="coment">${coment}</p>
     </div>
   `;
@@ -268,6 +268,8 @@ $("#exibirEstrelas").on("click", function () {
   avaliacoes.coment = coment;
   localStorage.setItem("dadosLocais", JSON.stringify(avaliacoes));
 });
+
+// 
 
 // =================== REVELAR - ANIMAÇÃO DA HOME PAGE =========================//
 
