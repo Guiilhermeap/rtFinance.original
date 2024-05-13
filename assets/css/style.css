@@ -1,11 +1,29 @@
 /*==================== GOOGLE FONTS ====================*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-/* =================== VARIAVEIS ======================== */
+/* ==================== VARIAVEIS FONTES ======================== */
+:root {
+  /* texto */
+  --font-text: "Inter", sans-serif;
+  --font-text-weight: 400;
+  /* titulo */
+  --font-title: "Inter", sans-serif;
+  --font-title-weight: 800;
+  /* titulo Sobre*/
+  --font-title-sobre: "Kode Mono", monospace;
+  --font-title-sobre-weight: 700;
+
+
+}
+
+
+
+
+/* =================== VARIAVEIS COLORS ======================== */
 :root {
   --color-primaria: 148;
 
@@ -68,7 +86,9 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-text);
+  font-weight: var(--font-text-weight);
+
   background-color: var(--bg-color);
   padding: 0;
   margin: 0;
@@ -168,7 +188,8 @@ body::-webkit-scrollbar-thumb {
 
 .nav__menu a {
   color: var(--color-texto-span);
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-text);
+  font-weight: var(--font-text-weight);
   position: relative;
   font-size: 20px;
   font-weight: 500;
@@ -218,7 +239,8 @@ body::-webkit-scrollbar-thumb {
   left: 5em;
   top: 2.2em;
   color: var(--color-texto-nav);
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-text);
+  font-weight: var(--font-text-weight);
   text-transform: uppercase;
   font-weight: 400;
 }
@@ -266,7 +288,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 20px;
   color: var(--color-texto-body);
   font-weight: 500;
-  top: 1.5em;
+  top: 1.7em;
 }
 
 .nav__border.sticky p:hover {
@@ -313,7 +335,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sobre__texto h1 {
-  font-family: "Kode Mono", monospace;
+  font-family: var(--font-title-sobre);
+  font-weight: var(--font-title-sobre-weight);
   text-align: start;
   font-size: 100px;
   color: var(--color-texto-body);
@@ -323,13 +346,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .rt_slogan {
-  font-family: "Kode Mono", monospace;
-  font-weight: 500;
-  font-size: 30px;
+  font-family: var(--font-title-sobre);
+  font-weight: var(--font-title-sobre-weight);
+  font-size: 32px;
   text-align: start;
   color: var(--color-texto-body);
   padding-top: 0.2em;
-  padding-left: 2.5em;
+  padding-left: 2.3em;
   text-shadow: 1px 1px 2px var(--color-texto-sombra);
 }
 
@@ -346,11 +369,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .rt_descricao {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-family: var(--font-text);
+  font-weight: var(--font-text-weight);
   font-size: 22px;
   text-align: justify;
-  padding: 0 2em;
   color: var(--color-texto-body);
 }
 
@@ -508,7 +530,6 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   background-color: var(--color-texto-body);
   border-radius: 15px;
-  border: 1px solid var(--bg-color);
 }
 
 #autor-card {
@@ -516,8 +537,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .autor-card {
-  margin: 2em;
-  padding: 0.5em 10em 1em 1em;
+  margin: 1em;
+  padding: 0.5em 3em 1em 1em;
   border: 1px solid var(--bg-color);
   background-color: var(--bg-color);
   border-radius: 10px;
@@ -527,6 +548,15 @@ body::-webkit-scrollbar-thumb {
   color: var(--color-texto-body);
   font-size: 20px;
   margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.autor-card p#coment {
+  border: 1px solid var(--color-texto-body);
+  padding: 0.5em;
+  border-radius: 10px;
+  width: 100%;
 }
 
 .autor-card #estrela {
@@ -598,6 +628,7 @@ body::-webkit-scrollbar-thumb {
 #comment {
   max-width: 100%;
   height: 6em;
+  
 }
 
 .vote {
