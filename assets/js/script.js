@@ -1,14 +1,14 @@
 // ========================= MUDANÇA DA BARRA DO HEADER ================================ //
 
-window.addEventListener("scroll", function () {
-  var header = document.querySelector("header");
-  header.classList.toggle("sticky", this.window.scrollY > 650);
-});
+// window.addEventListener("scroll", function () {
+//   var header = document.querySelector("header");
+//   header.classList.toggle("sticky", this.window.scrollY > 650);
+// });
 
-window.addEventListener("scroll", function () {
-  var header = document.getElementById("nav");
-  header.classList.toggle("sticky", this.window.scrollY > 650);
-});
+// window.addEventListener("scroll", function () {
+//   var header = document.getElementById("nav");
+//   header.classList.toggle("sticky", this.window.scrollY > 650);
+// });
 
 /*==================== DARK LIGHT THEME ====================*/
 const themeButton = document.getElementById("theme-button");
@@ -48,20 +48,20 @@ themeButton.addEventListener("click", () => {
 
 // ========================= MUDANÇA DE HEADER IMG ================================ //
 
-window.addEventListener("scroll", function () {
-  var scrollPosition = window.scrollY;
-  var imgOriginal = document.getElementById("img");
+// window.addEventListener("scroll", function () {
+//   var scrollPosition = window.scrollY;
+//   var imgOriginal = document.getElementById("img");
 
-  if (scrollPosition > 650) {
-    imgOriginal.src = "assets/img/logo_black.png";
-    // Trocar a imagem do cabeçalho
-    // header.style.backgroundImage = 'url(caminho_para_sua_imagem)';
-  } else if (scrollPosition < 650) {
-    imgOriginal.src = "assets/img/logo_white.png";
-    // Voltar para a imagem original do cabeçalho
-    // header.style.backgroundImage = 'url(caminho_para_sua_imagem_original)';
-  }
-});
+//   if (scrollPosition > 650) {
+//     imgOriginal.src = "assets/img/logo_black.png";
+//     // Trocar a imagem do cabeçalho
+//     // header.style.backgroundImage = 'url(caminho_para_sua_imagem)';
+//   } else if (scrollPosition < 650) {
+//     imgOriginal.src = "assets/img/logo_white.png";
+//     // Voltar para a imagem original do cabeçalho
+//     // header.style.backgroundImage = 'url(caminho_para_sua_imagem_original)';
+//   }
+// });
 
 // ========================= MUDAR ICON ================================ //
 
@@ -279,7 +279,7 @@ window.revelar = ScrollReveal({
 
 revelar.reveal(".sobre", {
   distance: "100px",
-  duration: 950,
+  duration: 1000,
   delay: 100,
   origin: "bottom",
   opacity: 0,
@@ -288,8 +288,8 @@ revelar.reveal(".sobre", {
 });
 
 revelar.reveal(".comentarios__container", {
-  distance: "30px",
-  duration: 950,
+  distance: "100px",
+  duration: 1000,
   delay: 100,
   origin: "bottom",
   opacity: 0,
@@ -298,8 +298,8 @@ revelar.reveal(".comentarios__container", {
 });
 
 revelar.reveal(".wrapper", {
-  distance: "30px",
-  duration: 950,
+  distance: "100px",
+  duration: 1000,
   delay: 100,
   origin: "bottom",
   opacity: 0,
@@ -308,8 +308,8 @@ revelar.reveal(".wrapper", {
 });
 
 revelar.reveal(".simulacao", {
-  distance: "30px",
-  duration: 950,
+  distance: "100px",
+  duration: 1000,
   delay: 100,
   origin: "bottom",
   opacity: 0,
@@ -318,8 +318,8 @@ revelar.reveal(".simulacao", {
 });
 
 revelar.reveal(".footer__site", {
-  distance: "30px",
-  duration: 950,
+  distance: "100px",
+  duration: 1000,
   delay: 100,
   origin: "bottom",
   opacity: 0,
@@ -328,10 +328,10 @@ revelar.reveal(".footer__site", {
 });
 
 revelar.reveal(".especialista__container", {
-  distance: "150px",
-  duration: 950,
-  delay: 200,
-  origin: "right",
+  distance: "100px",
+  duration: 800,
+  delay: 100,
+  origin: "bottom",
   opacity: 0,
   scale: 1,
   easing: "cubic-bezier(0.5, 0, 0, 1)",
