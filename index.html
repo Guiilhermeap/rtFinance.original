@@ -6,6 +6,8 @@
     <title>RT FINANCE</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
     <script
       type="text/javascript"
       src="https://www.gstatic.com/charts/loader.js"
@@ -67,22 +69,25 @@
       </div>
     </header>
 
-    
-
     <!-- ================== SOBRE ===================== -->
     <div class="sobre__container" id="sobre">
       <div class="sobre">
         <div class="sobre__texto">
-          <div class="box__aspas">
-            <div class="aspas__container1">
-              <i class="bi bi-quote"></i>
+          <h1>rt finance</h1>
+          <div class="container__slogan">
+            <p class="rt_slogan">Rumo ao</p>
+            <div class="container__tipos">
+              <div class="txt__sobre__animation">
+                <p class="txt-anim">sucesso</p>
+                <p class="txt-anim">progresso</p>
+                <p class="txt-anim">crecimento</p>
+                <p class="txt-anim">bem-estar</p>
+                <p class="txt-anim">florescimento</p>
+              </div>
             </div>
-            <h1>rt finance</h1>
-            <p class="rt_slogan">Rumo à Prosperidade Financeira!</p>
-            <div class="aspas__container2">
-              <i class="bi bi-quote aspas_2"></i>
-            </div>
+            <p class="rt_slogan">financeiro!</p>
           </div>
+
           <div class="descricao__container">
             <div>
               <p class="rt_descricao">
@@ -108,6 +113,9 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="sobre__img">
+          <img src="assets/img/img-sobre.png" srcset="">
         </div>
       </div>
     </div>
@@ -340,22 +348,33 @@
 
         <div class="especialista__sobre">
           <div class="especialista__img">
-            <svg class="blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink">
-            <mask id="mask0" mask-type="alpha">
-                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+            <svg
+              class="blob"
+              viewBox="0 0 200 187"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <mask id="mask0" mask-type="alpha">
+                <path
+                  d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
                 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
                 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-            </mask>
-            <g mask="url(#mask0)">
-                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+                />
+              </mask>
+              <g mask="url(#mask0)">
+                <path
+                  d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
                 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
                 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                <image class="blob__img" xlink:href="assets/img/prof_trovao-bg-blob.png" />
-            </g>
-        </svg>
+                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+                />
+                <image
+                  class="blob__img"
+                  xlink:href="assets/img/prof_trovao-bg-blob.png"
+                />
+              </g>
+            </svg>
           </div>
           <div class="especialista__sobre__saiba">
             <div class="especialista__title"><h2>RICARDO TROVÃO</h2></div>

@@ -1,5 +1,7 @@
 // ========================= MUDANÇA DA BARRA DO HEADER ================================ //
 
+// const SplitTextJS = require("split-text-js");
+
 // window.addEventListener("scroll", function () {
 //   var header = document.querySelector("header");
 //   header.classList.toggle("sticky", this.window.scrollY > 650);
@@ -335,4 +337,31 @@ revelar.reveal(".especialista__container", {
   opacity: 0,
   scale: 1,
   easing: "cubic-bezier(0.5, 0, 0, 1)",
+});
+
+
+// =================== ANIMAÇÃO 3D SOBRE-SLOGAN =========================//
+gsap.registerPlugin(SplitText);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const titles = gsap.utils.toArray(".txt-anim");
+  const tl = gsap.timeline({ repeat: -1 });
+
+  titles.forEach(title => {
+    const splitTitle = new SplitText(title, { type: "chars" });
+    
+    tl.from(splitTitle.chars, {
+      opacity: 0,
+      y: 30,
+      rotateX: -90,
+      stagger: .02,
+    }, "<")
+    .to(splitTitle.chars, {
+      opacity: 0,
+      y: -30,
+      rotateX: 90,
+      stagger: .02,
+      delay: 1,
+    }, "<1");
+  });
 });
