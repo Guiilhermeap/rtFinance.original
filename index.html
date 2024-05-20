@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RT FINANCE</title>
     <link rel="stylesheet" href="assets/css/style.css" />
-    
+    <script src="assets/js/comentario.js"></script>
+    <script src="assets/js/conversor.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
@@ -226,19 +227,19 @@
               </div>
               <div class="amount">
                 <p>Digite o Valor</p>
-                <input type="text" value="1" />
+                <input class="input__exchange" type="text" value="1" />
               </div>
               <div class="drop__list">
                 <div class="de">
                   <p>De</p>
                   <div class="select__box" id="select__box">
                     <img src="https://flagcdn.com/48x36/us.png" alt="flag" />
-                    <select class="select">
+                    <select class="select-op">
                       <!-- Options são colocadas apartir do JavaScript -->
                     </select>
                   </div>
                 </div>
-                <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                <div class="icon__exchange"><i class="fas fa-exchange-alt"></i></div>
                 <div class="para">
                   <p>Para</p>
                   <div class="select__box">
@@ -250,7 +251,7 @@
                 </div>
               </div>
               <div class="exchange-rate">Obtendo taxa de câmbio...</div>
-              <button>Obter taxa de câmbio</button>
+              <button class="button-exchange">Obter taxa de câmbio</button>
             </div>
           </form>
         </div>
