@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RT FINANCE</title>
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="assets/js/comentario.js"></script>
-    <script src="assets/js/conversor.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
@@ -25,7 +24,6 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-    <script src="assets/js/country-list.js"></script>
     <!-- <script src="assets/js/simuladorInves.js"></script> -->
     <script
       src="https://kit.fontawesome.com/8f33dbb147.js"
@@ -167,11 +165,11 @@
                 </div>
                 <div class="form-group2">
                   <label class="txt__name">Nome</label>
-                  <input type="text" id="name" name="name" required />
+                  <input type="text" id="nome" name="nome" required />
                 </div>
                 <div class="form-group3">
                   <label for="comment">Comentário</label>
-                  <textarea id="comment" name="comment" required></textarea>
+                  <textarea id="comentario" name="comentario" required></textarea>
                 </div>
                 <button type="submit" id="exibirEstrelas">
                   Enviar Comentário
@@ -209,17 +207,17 @@
             realize a conversão com valores em <span>tempo real!</span>
           </p>
           <p class="text__perg">
-            Está pensando em viajar? <br> Ou até mesmo ficar informado sobre a
-            cotação de moedas e seus valores? preencha com o valor e realize a
-            conversão.
+            Está pensando em viajar? <br />
+            Ou até mesmo ficar informado sobre a cotação de moedas e seus
+            valores? preencha com o valor e realize a conversão.
           </p>
         </div>
         <div class="form__container">
           <div class="img__conversor">
-            <img src="assets/img/img-conversor.png" alt="">
+            <img src="assets/img/img-conversor.png" alt="" />
           </div>
           <form class="form__conversor" action="#">
-            <div style="width: 100%">
+            <div class="form" style="width: 100%">
               <div class="img__cont">
                 <i class="uil uil-bitcoin-circle"></i>
                 <i class="uil uil-exchange-alt"></i>
@@ -227,19 +225,19 @@
               </div>
               <div class="amount">
                 <p>Digite o Valor</p>
-                <input class="input__exchange" type="text" value="1" />
+                <input type="text" value="1" />
               </div>
               <div class="drop__list">
                 <div class="de">
                   <p>De</p>
                   <div class="select__box" id="select__box">
                     <img src="https://flagcdn.com/48x36/us.png" alt="flag" />
-                    <select class="select-op">
+                    <select class="select">
                       <!-- Options são colocadas apartir do JavaScript -->
                     </select>
                   </div>
                 </div>
-                <div class="icon__exchange"><i class="fas fa-exchange-alt"></i></div>
+                <div class="icon"><i class="fas fa-exchange-alt"></i></div>
                 <div class="para">
                   <p>Para</p>
                   <div class="select__box">
@@ -477,4 +475,7 @@
     </footer>
   </body>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/country-list.js"></script>
+  <script src="assets/js/conversor.js"></script>
+  <script src="assets/js/comentario.js"></script>
 </html>

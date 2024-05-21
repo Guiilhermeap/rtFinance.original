@@ -196,7 +196,6 @@ body::-webkit-scrollbar-thumb {
 
 .nav__border img {
   width: 5em;
-
 }
 
 .nav__border p {
@@ -243,7 +242,7 @@ body::-webkit-scrollbar-thumb {
 
 .sobre__img {
   width: 50%;
-  height: 58%;  
+  height: 58%;
   background-color: var(--bg-sobre-img);
   border-radius: 15px;
 }
@@ -260,7 +259,6 @@ body::-webkit-scrollbar-thumb {
 .dark-theme .sobre__img img {
   border: 1px solid hsl(0, 0%, 43%);
 }
-
 
 .sobre__texto h1 {
   font-family: var(--font-title-sobre);
@@ -323,7 +321,6 @@ body::-webkit-scrollbar-thumb {
   margin: 0 0.5em;
 }
 
-
 /* =========== Dowload Planilha =========== */
 .about_buttons {
   display: flex;
@@ -384,7 +381,6 @@ body::-webkit-scrollbar-thumb {
   text-align: start;
 }
 
-
 .comentarios__header h1 {
   font-family: var(--font-title);
   font-weight: var(--font-title-weight);
@@ -406,7 +402,6 @@ body::-webkit-scrollbar-thumb {
   font-weight: 500;
   color: var(--color-texto-body);
   text-transform: uppercase;
- 
 }
 .txt__comentario p {
   font-size: var(--font-size-text-p);
@@ -524,7 +519,6 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 1em;
 }
 
-
 .form-group2 {
   display: block;
 }
@@ -548,7 +542,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   padding: 0.5em;
 }
-
 
 .form-group3 {
   display: block;
@@ -577,16 +570,17 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   font-size: 20px;
   height: 2.4em;
-  border: 1px solid var(--color-texto-body);
-  border-radius: 10px;
-  background-color: var(--bg-color-2);
-  color: var(--color-texto-body);
+  color: var(--bg-color);
   cursor: pointer;
+  background: var(--color-texto-body);
+  transition: all ease-in 0.3s;
+  text-transform: uppercase;
+  border-radius: 10px;
 }
 .form__comentario button:hover {
-  background-color: var(--bg-button-hover);
-  transition: all ease-in 0.3s;
-  color: var(--color-button-hover);
+  color: var(--color-texto);
+  background: var(--bg-color-2);
+  border: 1px solid var(--color-texto);
 }
 
 #comment {
@@ -648,7 +642,6 @@ body::-webkit-scrollbar-thumb {
   height: auto;
   text-align: start;
 }
-
 
 .dicas__header h1 {
   font-family: var(--font-title);
@@ -730,7 +723,7 @@ body::-webkit-scrollbar-thumb {
 
 .img__conversor {
   width: 25%;
-  height: auto;  
+  height: auto;
   background-color: var(--bg-color-2);
   border-radius: 15px;
 }
@@ -1168,8 +1161,6 @@ select {
   transition: all ease-in 0.2s;
   color: var(--color-button-hover);
 }
-
-
 
 /* ================= footer ================= */
 
