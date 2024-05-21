@@ -11,8 +11,8 @@
   /* texto */
   --font-text: "Inter", sans-serif;
   --font-text-weight: 400;
-  --font-size-text-h1: 30px;
-  --font-size-text-p: 26px;
+  --font-size-text-h1: 40px;
+  --font-size-text-p: 24px;
   --font-size-text-input: 20px;
   /* titulo */
   --font-title: "Inter", sans-serif;
@@ -611,7 +611,6 @@ body::-webkit-scrollbar-thumb {
 }
 .vote label i {
   color: var(--color-texto-body);
-  font-family: FontAwesome;
   font-size: 30px;
   transition-property: color, text;
   transition-duration: 0.2s, 0.2s;
@@ -653,6 +652,73 @@ body::-webkit-scrollbar-thumb {
   border-bottom: 1px solid var(--color-texto-body);
 }
 
+.dicas__conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4em 0 0 0;
+  background-color: orange;
+}
+
+.conteudo__container {
+  width: 100%;
+  height: 45em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+.conteudo__container::-webkit-scrollbar {
+  background-color: transparent; /* Define a cor do polegar como transparente */
+  display: none;
+}
+.conteudo__container::-webkit-scrollbar-track {
+  background-color: transparent; /* Define a cor do polegar como transparente */
+  display: none;
+}
+.conteudo__container::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Define a cor do polegar como transparente */
+  display: none;
+}
+
+.img__container {
+  width: 40%;
+  height: 80%;
+  padding: 0 2em 0 2em;
+}
+
+.img__container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.txt__conteudo {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+  padding: 4em;
+  overflow: hidden;
+}
+
+.txt__conteudo h1 {
+  font-size: var(--font-size-text-h1);
+  font-weight: var(--font-title-weight);
+  color: var(--color-texto-body);
+  text-transform: uppercase;
+  padding: 0 0 1em 0;
+}
+
+.txt__conteudo p {
+  font-size: var(--font-size-text-p);
+  font-weight: var(--font-text-weight);
+  color: var(--color-texto-body);
+  text-align: justify;
+  padding: 0 0 1em 0;
+}
 /* =========================== CONVERTER MOEDAS ================================ */
 .text__conversor {
   width: 100%;
