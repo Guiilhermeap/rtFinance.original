@@ -436,14 +436,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card__retorno {
-  height: 31.5em;
+  height: 31em;
   width: 40em;
 }
 
 .comentario__autor {
   width: 100%;
   height: 100%;
-  background-color: var(--bg-color-2);
+  background-color: var(--color-texto-body);
   border-radius: 15px;
   overflow: auto;
 }
@@ -653,11 +653,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .dicas__conteudo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-height: 170vh;
   margin: 4em 0 0 0;
-  background-color: orange;
+  overflow: scroll;
+  border: 1px solid var(--color-texto-body);
+  border-radius: 10px;
 }
 
 .conteudo__container {
@@ -666,38 +666,40 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  overflow: scroll;
 }
 
-.conteudo__container::-webkit-scrollbar {
+.dicas__conteudo::-webkit-scrollbar {
   background-color: transparent; /* Define a cor do polegar como transparente */
   display: none;
 }
-.conteudo__container::-webkit-scrollbar-track {
+.dicas__conteudo::-webkit-scrollbar-track {
   background-color: transparent; /* Define a cor do polegar como transparente */
   display: none;
 }
-.conteudo__container::-webkit-scrollbar-thumb {
+.dicas__conteudo::-webkit-scrollbar-thumb {
   background-color: transparent; /* Define a cor do polegar como transparente */
   display: none;
 }
 
 .img__container {
-  width: 40%;
-  height: 80%;
+  width: 45em;
+  height: 35em;
   padding: 0 2em 0 2em;
+  border-radius: 20px;
 }
 
 .img__container img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  border-radius: 20px;
 }
 
 .txt__conteudo {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   width: 60%;
   height: 100%;
   padding: 4em;
@@ -708,8 +710,10 @@ body::-webkit-scrollbar-thumb {
   font-size: var(--font-size-text-h1);
   font-weight: var(--font-title-weight);
   color: var(--color-texto-body);
+  width: 100%;
   text-transform: uppercase;
   padding: 0 0 1em 0;
+  text-align: start;
 }
 
 .txt__conteudo p {
@@ -718,6 +722,26 @@ body::-webkit-scrollbar-thumb {
   color: var(--color-texto-body);
   text-align: justify;
   padding: 0 0 1em 0;
+}
+
+.txt__conteudo .botao__dicas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color-2);
+  color: var(--color-texto-body);
+  font-size: var(--font-size-text-p);
+  font-weight: var(--font-text-weight);
+  width: 10em;
+  padding: 0.3em 0;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.txt__conteudo .botao__dicas:hover {
+  background-color: var(--color-texto-body);
+  color: var(--bg-color);
+  transition: all ease-in 0.3s;
 }
 /* =========================== CONVERTER MOEDAS ================================ */
 .text__conversor {
