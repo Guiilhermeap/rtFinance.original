@@ -473,38 +473,49 @@
               <div class="card">
                 <div class="input-box">
                   <div>
-                    <label for="ValorInicial">Valor Inicial:</label>
-                    <input type="number" id="ValorInicial" class="txtbox" />
-                  </div>
-                </div>
-                <div class="input-box">
-                  <div>
-                    <label for="ValorMensal">Contribuição Mensal:</label>
+                    <label for="ValorInicial">Valor Inicial</label>
                     <input
                       type="number"
-                      id="ValorMensal"
-                      required
+                      id="ValorInicial"
                       class="txtbox"
+                      placeholder="0.00"
+                      step="0.01" min="0" max="10"
+                      required
                     />
                   </div>
                 </div>
                 <div class="input-box">
-                  <label for="Tempo">Tempo:</label>
+                  <div>
+                    <label for="ValorMensal">Contribuição Mensal</label>
+                    <input
+                      type="number"
+                      id="ValorMensal"
+                      class="txtbox"
+                      placeholder="0"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="input-box">
+                  <label for="Tempo">Tempo</label>
                   <div class="input-field">
-                    <input type="number" id="Tempo" class="txtbox" required />
+                    <input type="number" id="Tempo" class="txtbox" placeholder="0"
+                    required />
                     <select id="timeUnit">
                       <option value="meses">Meses</option>
                       <option value="anos">Anos</option>
                     </select>
                   </div>
                 </div>
-                <button
-                  type="button"
-                  class="btn"
-                  onclick="calculateInvestments()"
-                >
-                  Calcular
-                </button>
+                <div class="button__">
+                  <button
+                    type="button"
+                    class="btn"
+                    onclick="calculateInvestments()"
+                  >
+                    Calcular
+                  </button>
+                </div>
               </div>
               <div id="graphContainer">
                 <div id="columnchart_material"></div>

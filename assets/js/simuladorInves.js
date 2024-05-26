@@ -110,7 +110,7 @@ function calculateInvestments() {
     data.addColumn("number", "CDI");
     data.addColumn("number", "Poupança");
     data.addColumn("number", "Tesouro Direto - Selic 2027");
-
+  
     // Preenchendo a tabela de dados com os valores calculados
     for (var i = 0; i < data1.length; i++) {
       data.addRow([
@@ -120,7 +120,7 @@ function calculateInvestments() {
         data1[i].tesouroDireto,
       ]);
     }
-
+  
     // Definindo as opções de formatação para o gráfico de barras
     var options = {
       colors: ["#00FF6A", "#00D997", "#00CAFF"],
@@ -131,16 +131,44 @@ function calculateInvestments() {
       },
       annotations: {
         textStyle: {
-          // The color of the text.
-          color: "black",
+          color: "var(--color-texto-body)",  // Cor do texto das anotações
+          fontSize: 12,
         },
       },
+      hAxis: {
+        textStyle: {
+          color: "var(--color-texto-body)",  // Cor do texto do eixo horizontal
+          fontSize: 18,
+        },
+        titleTextStyle: {
+          color: "var(--color-texto-body)",  // Cor do título do eixo horizontal
+          fontSize: 18,
+        },
+      },
+      vAxis: {
+        textStyle: {
+          color: "var(--color-texto-body)",  // Cor do texto do eixo vertical
+          fontSize: 18,
+        },
+        titleTextStyle: {
+          color: "var(--color-texto-body)",  // Cor do título do eixo vertical
+          fontSize: 18,
+        },
+      },
+      legend: {
+        textStyle: {
+          color: "var(--color-texto-body)",  // Cor do texto da legenda
+          fontSize: 18,
+        },
+      },
+      titleTextStyle: {
+        color: "var(--color-texto-body)",  // Cor do título do gráfico
+        fontSize: 18,
+      },
     };
-
+  
     // Criando o gráfico de barras e desenhando-o no elemento HTML especificado
-    var chart = new google.charts.Bar(
-      document.getElementById("columnchart_material")
-    );
+    var chart = new google.charts.Bar(document.getElementById("columnchart_material"));
     chart.draw(data, google.charts.Bar.convertOptions(options));
   }
 }

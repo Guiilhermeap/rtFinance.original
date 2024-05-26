@@ -17,8 +17,8 @@
   /* titulo */
   --font-title: "Inter", sans-serif;
   --font-title-weight: 500;
-  --font-size-title: 70px;
-  --font-lineheight-title: 70px;
+  --font-size-title: 60px;
+  --font-lineheight-title: 60px;
   /* titulo Sobre*/
   --font-title-sobre: "Kode Mono", monospace;
   --font-title-sobre-weight: 700;
@@ -29,9 +29,9 @@
   --color-primaria: 148;
 
   --bg-color: hsl(var(--color-primaria), 0%, 90%);
-  --bg-color-2: hsl(var(--color-primaria), 90%, 45%);
+  --bg-color-2: hsl(var(--color-primaria), 80%, 50%);
   --color-texto-nav: hsl(var(--color-primaria), 0%, 100%);
-  --color-texto-body: hsl(var(--color-primaria), 0%, 14%);
+  --color-texto-body: hsl(var(--color-primaria), 10%, 5%);
   --color-texto-body-2: hsl(var(--color-primaria), 0%, 14%);
   --color-texto-span: hsl(var(--color-primaria), 0%, 100%);
   --bg-button-hover: hsl(var(--color-primaria), 100%, 0%);
@@ -44,8 +44,8 @@
 
 /* ============== DARK =======================*/
 body.dark-theme {
-  --bg-color: hsl(var(--color-primaria), 0%, 14%);
-  --bg-color-2: hsl(var(--color-primaria), 100%, 40%);
+  --bg-color: hsl(var(--color-primaria), 10%, 5%);
+  --bg-color-2: hsl(var(--color-primaria), 80%, 20%);
   --color-texto-body: hsl(var(--color-primaria), 0%, 90%);
   --color-texto-body-2: hsl(var(--color-primaria), 0%, 14%);
   --color-texto-sombra: hsl(var(--color-primaria), 10%, 30%);
@@ -852,12 +852,6 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--bg-color);
 }
 
-.wrapper header {
-  font-size: 2em;
-  font-weight: 500;
-  text-align: center;
-}
-
 .form__conversor :where(input, select, button) {
   width: 100%;
   outline: none;
@@ -956,25 +950,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header__container {
-  height: 8em;
-  margin: 0 2em;
-  z-index: 1;
-  border-bottom: 1px solid var(--color-texto-body);
   padding: 0 2em;
 }
 
-.header__text {
-  height: 5em;
-}
-
 .header__text h1 {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 25px;
+  font-family: var(--font-title);
+  font-weight: var(--font-title-weight);
+  font-size: var(--font-size-title);
+  line-height: var(--font-lineheight-title);
   color: var(--color-texto-body);
-  position: relative;
-  padding-top: 4rem;
+  text-transform: uppercase;
+  padding: 0.6em 0 0.3em 0;
+  border-bottom: 1px solid var(--color-texto-body);
 }
 
 .container__box {
@@ -993,34 +980,33 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card {
-  width: 40%;
-  padding: 3em;
-  border-top: 0.5px solid rgba(63, 63, 63, 0.384);
-  border-right: 0.5px solid rgba(63, 63, 63, 0.384);
-  box-shadow: rgba(63, 63, 63, 0.384) -10px 10px 20px;
-  border-radius: 15px;
+  width: 35em;
+  height: auto;
+  padding: 2em;
+  box-shadow: rgba(63, 63, 63, 0.384) -5px 5px 10px;
+  border-radius: 10px;
   background-color: var(--bg-color-2);
   border: 0.5px solid var(--color-texto-body);
-}
-
-.input-box {
-  width: 100%;
+  color: var(--color-texto-body);
 }
 
 .input-box label {
   font-size: 20px;
-  color: var(--color-texto-body-2);
+  font-weight: var(--font-text-weight);
+  color: var(--color-texto-body);
+  text-transform: uppercase;
 }
 
 .input-box input {
   width: 100%;
   height: 2.5em;
-  display: flex;
-  border: 1px solid var(--color-texto-body-2);
+  font-size: 18px;
+  padding: 0.5em;
   border-radius: 10px;
-  font-size: 20px;
-  color: var(--color-texto-body-2);
-  padding: 0 1em;
+  border: 1px solid var(--color-texto-body);
+  background-color: var(--bg-color);
+  color: var(--color-texto-body);
+  margin: 0.2em 0 0.5em 0;
 }
 
 .input-field {
@@ -1031,28 +1017,45 @@ body::-webkit-scrollbar-thumb {
 }
 
 #Tempo {
-  width: 48%;
-  border: 1px solid var(--color-texto-body-2);
+  width: 70%;
 }
 
 #timeUnit {
-  width: 48%;
+  width: 25%;
+  height: 2.5em;
+  font-size: 18px;
+  padding: 0.5em;
   border-radius: 10px;
-  border: 1px solid var(--color-texto-body-2);
-  color: var(--color-texto-body-2);
+  border: 1px solid var(--color-texto-body);
+  background-color: var(--bg-color);
+  color: var(--color-texto-body);
+  margin: 0.2em 0 0.5em 0;
 }
 
-.btn {
+.button__{  
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  font-size: 20px;
+
+}
+
+
+.btn {
+  background-color: var(--bg-color);
+  color: var(--color-texto-body);
+  width: 80%;
+  font-size: 18px;
   height: 2.4em;
   margin-top: 1em;
-  border: 1px solid var(--color-texto-body-2);
+  border: 1px solid var(--color-texto-body);
   border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .btn:hover {
-  background-color: var(--color-texto-body-2);
+  background-color: var(--color-texto-body);
   border: 1px solid var(--color-texto);
   color: #fff;
   transition: all ease-in 0.5s;
@@ -1085,7 +1088,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48%;
+  width: 50%;
   height: 100%;
   display: none;
 }
@@ -1193,7 +1196,6 @@ select {
 .especialista__img {
   width: 50em;
   height: 50em;
-
 }
 
 .blob {
