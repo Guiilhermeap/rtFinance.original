@@ -1161,27 +1161,19 @@ select {
 }
 
 .especialista__header {
-  height: 8em;
   padding: 0 2em;
-  margin: 0 2em;
-  background-color: var(--bg-color);
-  z-index: 1;
-  border-bottom: 1px solid var(--color-texto-body);
 }
 
-.especialista__barra {
-  gap: 16px;
-  height: 5em;
-}
 
 .especialista__barra h1 {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 25px;
+  font-family: var(--font-title);
+  font-weight: var(--font-title-weight);
+  font-size: var(--font-size-title);
+  line-height: var(--font-lineheight-title);
   color: var(--color-texto-body);
-  position: relative;
-  padding-top: 4rem;
+  text-transform: uppercase;
+  padding: 0.6em 0 0.3em 0;
+  border-bottom: 1px solid var(--color-texto-body);
 }
 
 .especialista__sobre {
