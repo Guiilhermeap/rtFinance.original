@@ -246,6 +246,9 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--bg-sobre-img);
   border-radius: 15px;
 }
+.dark-theme .sobre__img{
+  background-color: transparent;
+}
 
 .sobre__img img {
   object-fit: cover;
@@ -257,7 +260,8 @@ body::-webkit-scrollbar-thumb {
   padding: 0 2em;
 }
 .dark-theme .sobre__img img {
-  border: 1px solid hsl(0, 0%, 43%);
+  background-color: transparent;
+  display: none;
 }
 
 .sobre__texto h1 {
@@ -663,6 +667,14 @@ body::-webkit-scrollbar-thumb {
   border-bottom: 1px solid var(--color-texto-body);
 }
 
+.dicas__header p {
+  font-size: var(--font-size-text-p);
+  font-weight: var(--font-text-weight);
+  color: var(--color-texto-body);
+  text-align: justify;
+  padding: 1em 0;
+}
+
 .dicas__conteudo {
   max-height: 170vh;
   margin: 4em 0 0 0;
@@ -672,10 +684,15 @@ body::-webkit-scrollbar-thumb {
 
 .conteudo__container {
   width: 100%;
-  height: 45em;
+  height: 40em;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 3px solid hsl(var(--color-primaria), 0%, 80%);
+}
+
+.dark-theme .conteudo__container {
+  border-bottom: 3px solid hsl(var(--color-primaria), 0%, 20%);
 }
 
 .dicas__conteudo::-webkit-scrollbar {
@@ -692,8 +709,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .img__container {
-  width: 45em;
-  height: 35em;
+  width: 40em;
+  height: 30em;
   padding: 0 2em 0 2em;
   border-radius: 20px;
 }
@@ -710,9 +727,8 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 60%;
-  height: 100%;
-  padding: 4em;
+  width: 70%;
+  padding: 2em;
   overflow: hidden;
 }
 
@@ -721,8 +737,8 @@ body::-webkit-scrollbar-thumb {
   font-weight: var(--font-title-weight);
   color: var(--color-texto-body);
   width: 100%;
+  padding-bottom: 1em;
   text-transform: uppercase;
-  padding: 0 0 1em 0;
   text-align: start;
 }
 
@@ -731,7 +747,14 @@ body::-webkit-scrollbar-thumb {
   font-weight: var(--font-text-weight);
   color: var(--color-texto-body);
   text-align: justify;
-  padding: 0 0 1em 0;
+}
+
+.txt__conteudo span {
+  font-size: 20px;
+  font-style: italic;
+  padding: 1em 0 0 10em;
+  text-align: justify;
+  display: flex;
 }
 
 .txt__conteudo .botao__dicas {
@@ -1114,6 +1137,14 @@ select {
   text-transform: uppercase;
   text-align: justify;
   color: var(--color-texto-body);
+}
+
+.text_inv_p {
+  font-size: 20px;
+  text-align: justify;
+  color: var(--color-texto-body);
+  padding: 1em 0;
+  text-transform: uppercase;
 }
 
 .text__invss {
