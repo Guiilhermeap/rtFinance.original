@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.sidebar {
+    background-color: #04AA6D;
+    width: 25%;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+    .sidebar .logo {
+        display: block;
+        margin: 0 0 20px 0; /* Remove centralização e adiciona margem inferior */
+        width: 25%; /* Ajuste conforme necessário para diminuir o tamanho */
+        max-width: 150px; /* Ajuste conforme necessário para diminuir o tamanho */
+        align-self: flex-start; /* Alinha o logo no canto superior esquerdo */
+    }
+
+    .sidebar a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px 0;
+        font-size: 18px;
+        text-align: center;
+        margin: 20px 0;
+        border-radius: 8px;
+    }
+
+        .sidebar a:hover {
+            background-color: white;
+            color: #04AA6D;
+        }
+
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 80%; /* Alinha com a largura da tabela */
+}
+
+table {
+    width: 90%; /* Ajuste a largura conforme necessário */
+    border-collapse: collapse;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    margin: 0 auto; /* Centraliza a tabela horizontalmente */
+}
+
+td, th {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+th {
+    background-color: #04AA6D;
+    color: #fafafa;
+    font-weight: 200;
+}
+
+tr {
+    background-color: #fafafa;
+}
+
+    tr:nth-child(even) {
+        background-color: #eeeeee;
+    }
+
+th, td {
+    border: none;
+}
+
+.button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #04AA6D;
+    color: white;
+    border: solid #04AA6D;
+    border-radius: 30px;
+}
+
+    .button1:hover {
+        background-color: white;
+        color: black;
+    }
